@@ -24,61 +24,71 @@
     />
   </head>
   <body>
-    <header>
-      <div>
-        <nav>
-          <a href="#">HOME</a>
-          <a href="#band">BAND</a>
-          <a href="#tour">TOUR</a>
-          <a href="#contact">CONTACT</a>
+    <header class="header">
+      <div class="header-container">
+        <nav class="navbar">
+          <a class="nav-item" href="#">HOME</a>
+          <a class="nav-item" href="#band">BAND</a>
+          <a class="nav-item" href="#tour">TOUR</a>
+          <a class="nav-item" href="#contact">CONTACT</a>
         </nav>
         <div class="dropdown">
           <button class="dropdown-btn">
             MORE
             <i class="fa fa-caret-down"></i>
           </button>
-          <nav>
-            <a href="#">Merchandise</a>
-            <a href="#">Extras</a>
-            <a href="#">Media</a>
+          <nav class="dropdown-menu">
+            <a class="dropdown-item" href="#">Merchandise</a>
+            <a class="dropdown-item" href="#">Extras</a>
+            <a class="dropdown-item" href="#">Media</a>
           </nav>
         </div>
       </div>
-      <div>
+      <div class="search-btn">
         <i class="fa fa-search"></i>
       </div>
     </header>
-    <section>
-      <div>
-        <div>
-          <img src="https://www.w3schools.com/w3images/la.jpg" alt="anh" />
-          <div>
-            <h2>Los Angeles</h2>
-            <b>We had the best time playing at Venice Beach!</b>
-          </div>
+    <section class="slider">
+      <div class="slide">
+        <img
+          class="slide-img"
+          src="https://www.w3schools.com/w3images/la.jpg"
+          alt="anh"
+        />
+        <div class="slide-content">
+          <h2>Los Angeles</h2>
+          <b>We had the best time playing at Venice Beach!</b>
         </div>
-        <div>
-          <img src="https://www.w3schools.com/w3images/ny.jpg" alt="anh" />
-          <div>
-            <h2>New York</h2>
-            <b>The atmosphere in New York is lorem ipsum.</b>
-          </div>
+      </div>
+      <div class="slide">
+        <img
+          class="slide-img"
+          src="https://www.w3schools.com/w3images/ny.jpg"
+          alt="anh"
+        />
+        <div class="slide-content">
+          <h2>New York</h2>
+          <b>The atmosphere in New York is lorem ipsum.</b>
         </div>
-        <div>
-          <img src="https://www.w3schools.com/w3images/chicago.jpg" alt="anh" />
-          <div>
-            <h2>Chicago</h2>
-            <b>Thank you, Chicago - A night we won't forget.</b>
-          </div>
+      </div>
+      <div class="slide">
+        <img
+          class="slide-img"
+          src="https://www.w3schools.com/w3images/chicago.jpg"
+          alt="anh"
+        />
+        <div class="slide-content">
+          <h2>Chicago</h2>
+          <b>Thank you, Chicago - A night we won't forget.</b>
         </div>
       </div>
     </section>
     <main>
       <!-- THE BAND -->
-      <section>
-        <h2>THE BAND</h2>
-        <p>We love music</p>
-        <p>
+      <section class="band">
+        <h2 class="section-title">THE BAND</h2>
+        <p class="section-subtitle">We love music</p>
+        <p class="section-description">
           We have created a fictional band website. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -92,24 +102,27 @@
           consequat.
         </p>
       </section>
-      <div>
-        <div>
-          <p>Name</p>
+      <div class="member-list">
+        <div class="member-item">
+          <p class="member-name">Name</p>
           <img
+            class="mumber-img"
             src="https://www.w3schools.com/w3images/bandmember.jpg"
             alt="anh"
           />
         </div>
-        <div>
-          <p>Name</p>
+        <div class="member-item">
+          <p class="member-name">Name</p>
           <img
+            class="member-img"
             src="https://www.w3schools.com/w3images/bandmember.jpg"
             alt="anh"
           />
         </div>
-        <div>
-          <p>Name</p>
+        <div class="member-item">
+          <p class="member-name">Name</p>
           <img
+            class="member-img"
             src="https://www.w3schools.com/w3images/bandmember.jpg"
             alt="anh"
           />
@@ -117,59 +130,71 @@
       </div>
 
       <!-- TOUR DATES -->
-      <section>
-        <div>
-          <h2>TOUR DATES</h2>
-          <p>Remember to book your tickets!</p>
+      <section class="tour">
+        <div class="tour-header">
+          <h2 class="section-title">TOUR DATES</h2>
+          <p class="section-subtitle">Remember to book your tickets!</p>
         </div>
-        <div>
-          <ul>
-            <li>
+        <div class="tours">
+          <ul class="tours-list">
+            <li class="tours-item">
               September
-              <span>Sold out</span>
+              <span class="sold-out">Sold out</span>
             </li>
-            <li>
+            <li class="tours-item">
               October
-              <span>Sold out</span>
+              <span class="sold-out">Sold out</span>
             </li>
-            <li>
+            <li class="tours-item">
               November
-              <span>3</span>
+              <span class="ba">3</span>
             </li>
           </ul>
         </div>
-        <div>
-          <div>
+        <div class="usa">
+          <div class="usa-card">
             <img
+              class="usa-img"
               src="https://www.w3schools.com/w3images/newyork.jpg"
-              alt="anh"
+              alt="New York"
             />
-            <div>
-              <h3>New York</h3>
-              <p>Fri 27 Nov 2016</p>
-              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button>Buy Tickets</button>
+            <div class="usa-content">
+              <h3 class="usa-place">New York</h3>
+              <p class="usa-date">Fri 27 Nov 2016</p>
+              <p class="usa-desc">
+                Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              </p>
+              <button class="buy-btn">Buy Tickets</button>
             </div>
           </div>
-          <div>
-            <img src="https://www.w3schools.com/w3images/paris.jpg" alt="anh" />
-            <div>
-              <h3>Paris</h3>
-              <p>Sat 28 Nov 2016</p>
-              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button>Buy Tickets</button>
-            </div>
-          </div>
-          <div>
+          <div class="usa-card">
             <img
-              src="https://www.w3schools.com/w3images/sanfran.jpg"
-              alt="anh"
+              class="usa-img"
+              src="https://www.w3schools.com/w3images/paris.jpg"
+              alt="Paris"
             />
-            <div>
-              <h3>San Francisco</h3>
-              <p>Sat 29 Nov 2016</p>
-              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <button>Buy Tickets</button>
+            <div class="usa-content">
+              <h3 class="usa-place">Paris</h3>
+              <p class="usa-date">Sat 28 Nov 2016</p>
+              <p class="usa-desc">
+                Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              </p>
+              <button class="buy-btn">Buy Tickets</button>
+            </div>
+          </div>
+          <div class="usa-card">
+            <img
+              class="usa-img"
+              src="https://www.w3schools.com/w3images/sanfran.jpg"
+              alt="san Francisco"
+            />
+            <div class="usa-content">
+              <h3 class="usa-place">San Francisco</h3>
+              <p class="usa-date">Sat 29 Nov 2016</p>
+              <p class="usa-desc">
+                Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              </p>
+              <button class="buy-btn">Buy Tickets</button>
             </div>
           </div>
         </div>
