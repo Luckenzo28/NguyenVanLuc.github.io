@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>W3.CSS templete</title>
+    <link rel="stylesheet" href="giaodien.css" />
+    <script src="js/JavaScript.js" defer></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="icon"
+      href="https://www.w3schools.com/favicon.ico"
+      type="image/x-icon"
+    />
 
     <link
       rel="stylesheet"
@@ -15,26 +22,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-      .mySlides {
-        display: none;
-      }
-    </style>
   </head>
   <body>
     <header>
       <div>
         <nav>
           <a href="#">HOME</a>
-          <a href="#BAND">BAND</a>
-          <a href="#TOUR">TOUR</a>
-          <a href="#CONTACT">CONTACT</a>
+          <a href="#band">BAND</a>
+          <a href="#tour">TOUR</a>
+          <a href="#contact">CONTACT</a>
         </nav>
         <div>
-          <button>MORE</button>
+          <button>
+            MORE
+            <i class="fa fa-caret-down"></i>
+          </button>
           <nav>
             <a href="#">Merchandise</a>
             <a href="#">Extras</a>
@@ -45,42 +47,35 @@
       <div>
         <i class="fa fa-search"></i>
       </div>
+    </header>
+    <section>
       <div>
         <div>
-          <img
-            src="https://www.w3schools.com/w3images/la.jpg"
-            style="width: 100%"
-          />
+          <img src="https://www.w3schools.com/w3images/la.jpg" alt="anh" />
           <div>
             <h2>Los Angeles</h2>
             <b>We had the best time playing at Venice Beach!</b>
           </div>
         </div>
         <div>
-          <img
-            src="https://www.w3schools.com/w3images/ny.jpg"
-            style="width: 100%"
-          />
+          <img src="https://www.w3schools.com/w3images/ny.jpg" alt="anh" />
           <div>
             <h2>New York</h2>
             <b>The atmosphere in New York is lorem ipsum.</b>
           </div>
         </div>
         <div>
-          <img
-            src="	https://www.w3schools.com/w3images/chicago.jpg"
-            style="width: 100%"
-          />
+          <img src="https://www.w3schools.com/w3images/chicago.jpg" alt="anh" />
           <div>
             <h2>Chicago</h2>
             <b>Thank you, Chicago - A night we won't forget.</b>
           </div>
         </div>
       </div>
-    </header>
+    </section>
     <main>
       <!-- THE BAND -->
-      <div>
+      <section>
         <h2>THE BAND</h2>
         <p>We love music</p>
         <p>
@@ -96,19 +91,28 @@
           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.
         </p>
-      </div>
+      </section>
       <div>
         <div>
           <p>Name</p>
-          <img src="	https://www.w3schools.com/w3images/bandmember.jpg" />
+          <img
+            src="https://www.w3schools.com/w3images/bandmember.jpg"
+            alt="anh"
+          />
         </div>
         <div>
           <p>Name</p>
-          <img src="	https://www.w3schools.com/w3images/bandmember.jpg" />
+          <img
+            src="https://www.w3schools.com/w3images/bandmember.jpg"
+            alt="anh"
+          />
         </div>
         <div>
           <p>Name</p>
-          <img src="	https://www.w3schools.com/w3images/bandmember.jpg" />
+          <img
+            src="https://www.w3schools.com/w3images/bandmember.jpg"
+            alt="anh"
+          />
         </div>
       </div>
 
@@ -136,7 +140,10 @@
         </div>
         <div>
           <div>
-            <img src="https://www.w3schools.com/w3images/newyork.jpg" />
+            <img
+              src="https://www.w3schools.com/w3images/newyork.jpg"
+              alt="anh"
+            />
             <div>
               <h3>New York</h3>
               <p>Fri 27 Nov 2016</p>
@@ -145,7 +152,7 @@
             </div>
           </div>
           <div>
-            <img src="	https://www.w3schools.com/w3images/paris.jpg" />
+            <img src="https://www.w3schools.com/w3images/paris.jpg" alt="anh" />
             <div>
               <h3>Paris</h3>
               <p>Sat 28 Nov 2016</p>
@@ -154,7 +161,10 @@
             </div>
           </div>
           <div>
-            <img src="	https://www.w3schools.com/w3images/sanfran.jpg" />
+            <img
+              src="https://www.w3schools.com/w3images/sanfran.jpg"
+              alt="anh"
+            />
             <div>
               <h3>San Francisco</h3>
               <p>Sat 29 Nov 2016</p>
@@ -163,6 +173,7 @@
             </div>
           </div>
         </div>
+
         <div>
           <h2>CONTACT</h2>
           <p>Fan? Drop a note!</p>
@@ -177,34 +188,72 @@
             </div>
             <div>
               <form>
-                <input type="name" placeholder="name" />
+                <input type="text" placeholder="name" />
                 <input type="email" placeholder="email" />
                 <br />
-                <input type="message" placeholder="message" />
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">SEND</button>
               </form>
             </div>
-            <button>SEND</button>
           </div>
         </div>
         <img
           src="https://www.w3schools.com/w3images/map.jpg"
+          alt="anh"
           style="width: 100%"
         />
       </section>
-      <footer>
-        <i class="fa fa-facebook-official"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-snapchat"></i>
-        <i class="fa fa-pinterest"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-linkedin"></i>
-        <p>
-          Powered by
-          <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-            >w3.css</a
-          >
-        </p>
-      </footer>
     </main>
+    <footer>
+      <i class="fa fa-facebook-official"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-snapchat"></i>
+      <i class="fa fa-pinterest"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-linkedin"></i>
+      <p>
+        Powered by
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          >w3.css</a
+        >
+      </p>
+    </footer>
+
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <i class="fa fa-suitcase"></i>
+          Tickets
+          <span class="modal-close">&times;</span>
+        </div>
+
+        <div class="modal-body">
+          <label>
+            <i class="fa fa-shopping-cart"></i>
+            Tickets, $15 per person
+          </label>
+
+          <input type="text" placeholder="How many?" />
+
+          <label>
+            <i class="fa fa-user"></i>
+            Send To
+          </label>
+
+          <input type="email" placeholder="Enter email" />
+
+          <button class="pay-btn">
+            PAY
+            <i class="fa fa-check"></i>
+          </button>
+        </div>
+
+        <div class="modal-footer">
+          <button class="close-btn">Close <i class="fa fa-remove"></i></button>
+
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
