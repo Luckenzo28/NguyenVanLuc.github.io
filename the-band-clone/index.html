@@ -23,7 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <body>
+  <body class="bodys">
     <header class="header">
       <div class="header-container">
         <nav class="navbar">
@@ -33,10 +33,10 @@
           <a class="nav-item" href="#contact">CONTACT</a>
         </nav>
         <div class="dropdown">
-          <button class="dropdown-btn">
+          <a class="dropdown-btn">
             MORE
             <i class="fa fa-caret-down"></i>
-          </button>
+          </a>
           <nav class="dropdown-menu">
             <a class="dropdown-item" href="#">Merchandise</a>
             <a class="dropdown-item" href="#">Extras</a>
@@ -106,7 +106,7 @@
         <div class="member-item">
           <p class="member-name">Name</p>
           <img
-            class="mumber-img"
+            class="member-img"
             src="https://www.w3schools.com/w3images/bandmember.jpg"
             alt="anh"
           />
@@ -164,7 +164,7 @@
               <p class="usa-desc">
                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
               </p>
-              <button class="buy-btn">Buy Tickets</button>
+              <a class="buy-btn">Buy Tickets</a>
             </div>
           </div>
           <div class="usa-card">
@@ -179,7 +179,7 @@
               <p class="usa-desc">
                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
               </p>
-              <button class="buy-btn">Buy Tickets</button>
+              <a class="buy-btn">Buy Tickets</a>
             </div>
           </div>
           <div class="usa-card">
@@ -194,16 +194,16 @@
               <p class="usa-desc">
                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
               </p>
-              <button class="buy-btn">Buy Tickets</button>
+              <a class="buy-btn">Buy Tickets</a>
             </div>
           </div>
         </div>
 
-        <div>
-          <h2>CONTACT</h2>
-          <p>Fan? Drop a note!</p>
-          <div>
-            <div>
+        <div class="lienhe">
+          <h2 class="section-title">CONTACT</h2>
+          <p class="section-subtitle">Fan? Drop a note!</p>
+          <div class="lienhe-mot">
+            <div class="lienhe-hai">
               <i class="fa fa-map-marker"></i>
               Chicago, US<br />
               <i class="fa fa-phone"></i>
@@ -211,25 +211,27 @@
               <i class="fa fa-envelope"></i>
               Email: email@email.com<br />
             </div>
-            <div>
-              <form>
-                <input type="text" placeholder="name" />
-                <input type="email" placeholder="email" />
-                <br />
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">SEND</button>
+            <div class="lienhe-ba">
+              <form class="lienhe-bon">
+                <div class="name">
+                  <input class="thongtin" type="text" placeholder="Name" />
+                  <input class="thongtin" type="email" placeholder="Email" />
+                </div>
+                <input class="thongtin1" type="text" placeholder="Message" />
+                <a class="send" type="submit">SEND</a>
               </form>
             </div>
           </div>
         </div>
         <img
+          class="map"
           src="https://www.w3schools.com/w3images/map.jpg"
           alt="anh"
           style="width: 100%"
         />
       </section>
     </main>
-    <footer>
+    <footer class="footers">
       <i class="fa fa-facebook-official"></i>
       <i class="fa fa-instagram"></i>
       <i class="fa fa-snapchat"></i>

@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+}
+
+.bodys {
+  background-color: rgb(255, 255, 255);
+  font-family: lato, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.search-btn {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.nav-item,
+.dropdown-item {
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: rgba(232, 222, 222, 0.856);
+  color: black;
+}
+.search-btn:hover {
+  background-color: red;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-btn {
+  color: aliceblue;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.dropdown-btn:hover {
+  background-color: rgba(232, 222, 222, 0.856);
+  color: black;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-menu a {
+  display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+.dropdown-menu a:hover {
+  background: #ccc;
+}
+
+/* Khi rê chuột vào MORE thì hiện menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.slide {
+  position: relative;
+}
+
+.slide-content {
+  position: absolute;
+  color: white;
+  width: 100%;
+  text-align: center;
+  bottom: 40px;
+}
+
+.band {
+  text-align: center;
+}
+.section-title {
+  letter-spacing: 3px;
+  padding-top: 40px;
+}
+.section-subtitle {
+  opacity: 0.6;
+}
+.section-description {
+  text-align: justify;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.member-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 70%;
+  margin: 50px auto;
+}
+.member-name {
+  text-align: center;
+}
+.member-img {
+  border-radius: 10px;
+}
+
+.tour {
+  background-color: black;
+}
+
+.tour-header {
+  text-align: center;
+  color: white;
+}
+.tours {
+  background-color: rgb(216, 225, 232);
+  width: 70%;
+  margin: 30px auto;
+}
+
+.tours-item {
+  padding: 10px;
+  opacity: 0.6;
+  border-bottom: 1px solid black;
+}
+.tours ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sold-out {
+  margin: 0 20px;
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+}
+.ba {
+  float: right;
+  border-radius: 50%;
+  padding: 4px 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.usa {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 30px auto;
+  gap: 20px;
+}
+
+.usa-img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s;
+}
+.usa-img:hover {
+  opacity: 0.6;
+}
+
+.usa-content {
+  background-color: aliceblue;
+  padding: 20px;
+}
+.usa-card {
+  background-color: aliceblue;
+}
+
+.usa-place {
+  font-weight: 600;
+}
+.usa-date {
+  opacity: 0.6;
+}
+.buy-btn {
+  padding: 10px 18px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+.buy-btn:hover {
+  background-color: rgb(203, 213, 221);
+  color: black;
+}
+
+.lienhe {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+.lienhe-mot {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.lienhe-hai {
+  text-align: left;
+}
+
+.lienhe-bon {
+  text-align: left;
+}
+.thongtin {
+  padding: 8px 6px;
+}
+.name {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.thongtin1 {
+  width: 100%;
+  padding: 8px 6px;
+}
+.send {
+  margin: 10px 0 50px 0;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  float: right;
+  cursor: pointer;
+}
+.send:hover {
+  background-color: rgb(205, 213, 220);
+  color: black;
+}
+.footers {
+  text-align: center;
+  margin: 50px;
+}
