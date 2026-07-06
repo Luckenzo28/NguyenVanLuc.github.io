@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>W3.CSS templete</title>
     <link rel="stylesheet" href="giaodien.css" />
-    <script src="js/JavaScript.js" defer></script>
+    <script src="JavaScript.js" defer></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link
       rel="icon"
@@ -23,212 +23,243 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <body class="bodys">
+  <body>
     <header class="header">
-      <div class="header-container">
-        <nav class="navbar">
-          <a class="nav-item" href="#">HOME</a>
-          <a class="nav-item" href="#band">BAND</a>
-          <a class="nav-item" href="#tour">TOUR</a>
-          <a class="nav-item" href="#contact">CONTACT</a>
-        </nav>
-        <div class="dropdown">
-          <a class="dropdown-btn">
-            MORE
-            <i class="fa fa-caret-down"></i>
-          </a>
-          <nav class="dropdown-menu">
-            <a class="dropdown-item" href="#">Merchandise</a>
-            <a class="dropdown-item" href="#">Extras</a>
-            <a class="dropdown-item" href="#">Media</a>
-          </nav>
+      <nav class="navbar">
+        <div class="nav-menu" id="navMenu">
+          <a class="nav-link home" href="#home">HOME</a>
+
+          <a class="nav-link" href="#band">BAND</a>
+
+          <a class="nav-link" href="#tour">TOUR</a>
+
+          <a class="nav-link" href="#contact">CONTACT</a>
+
+          <div class="dropdown">
+            <a class="nav-link dropdown-btn" href="#">
+              MORE
+              <i class="fa fa-caret-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="#">Merchandise</a></li>
+              <li><a href="#">Extras</a></li>
+              <li><a href="#">Media</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="search-btn">
-        <i class="fa fa-search"></i>
-      </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa fa-bars"></i>
+        </div>
+        <a class="search-btn" href="#">
+          <i class="fa fa-search"></i>
+        </a>
+      </nav>
     </header>
-    <section class="slider">
+    <section id="home" class="slider">
       <div class="slide">
         <img
           class="slide-img"
           src="https://www.w3schools.com/w3images/la.jpg"
-          alt="anh"
+          alt="Los Angeles"
         />
         <div class="slide-content">
-          <h2>Los Angeles</h2>
-          <b>We had the best time playing at Venice Beach!</b>
+          <h2 class="slide-title">Los Angeles</h2>
+          <p class="slide-text">
+            We had the best time playing at Venice Beach!
+          </p>
         </div>
       </div>
       <div class="slide">
         <img
           class="slide-img"
           src="https://www.w3schools.com/w3images/ny.jpg"
-          alt="anh"
+          alt="New York"
         />
         <div class="slide-content">
-          <h2>New York</h2>
-          <b>The atmosphere in New York is lorem ipsum.</b>
+          <h2 class="slide-title">New York</h2>
+          <p class="slide-text">The atmosphere in New York is lorem ipsum.</p>
         </div>
       </div>
       <div class="slide">
         <img
           class="slide-img"
           src="https://www.w3schools.com/w3images/chicago.jpg"
-          alt="anh"
+          alt="Chicago"
         />
         <div class="slide-content">
-          <h2>Chicago</h2>
-          <b>Thank you, Chicago - A night we won't forget.</b>
+          <h2 class="slide-title">Chicago</h2>
+          <p class="slide-text">
+            Thank you, Chicago - A night we won't forget.
+          </p>
         </div>
       </div>
     </section>
     <main>
-      <!-- THE BAND -->
-      <section class="band">
-        <h2 class="section-title">THE BAND</h2>
-        <p class="section-subtitle">We love music</p>
-        <p class="section-description">
-          We have created a fictional band website. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
-        </p>
+      <section id="band" class="band-section">
+        <div class="band-content">
+          <h2 class="section-title">THE BAND</h2>
+          <p class="section-subtitle">We love music</p>
+          <p class="section-description">
+            We have created a fictional band website. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+        </div>
+        <div class="member-list">
+          <div class="member-item">
+            <p class="member-name">Name</p>
+            <img
+              class="member-img"
+              src="https://www.w3schools.com/w3images/bandmember.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="member-item">
+            <p class="member-name">Name</p>
+            <img
+              class="member-img"
+              src="https://www.w3schools.com/w3images/bandmember.jpg"
+              alt="name"
+            />
+          </div>
+          <div class="member-item">
+            <p class="member-name">Name</p>
+            <img
+              class="member-img"
+              src="https://www.w3schools.com/w3images/bandmember.jpg"
+              alt="name"
+            />
+          </div>
+        </div>
       </section>
-      <div class="member-list">
-        <div class="member-item">
-          <p class="member-name">Name</p>
-          <img
-            class="member-img"
-            src="https://www.w3schools.com/w3images/bandmember.jpg"
-            alt="anh"
-          />
+      <section class="tour-section">
+        <div class="tour-container">
+          <div class="headers">
+            <h2 class="section-titles">TOUR DATES</h2>
+            <p class="section-subtitles">Remember to book your tickets!</p>
+          </div>
+          <div class="tour-status">
+            <ul class="tour-list">
+              <li class="tour-item">
+                September
+                <span class="sold-out">Sold out</span>
+              </li>
+              <li class="tour-item">
+                October
+                <span class="sold-out">Sold out</span>
+              </li>
+              <li class="tour-item">
+                November
+                <span class="ticket-count">3</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tour-cards">
+            <div class="tour-card">
+              <img
+                class="tour-img"
+                src="https://www.w3schools.com/w3images/newyork.jpg"
+                alt="New York"
+              />
+              <div class="tour-content">
+                <h3 class="tour-city">New York</h3>
+                <p class="tour-date">Fri 27 Nơ 2016</p>
+                <p class="tour-description">
+                  Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                </p>
+                <button class="tour-btn">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="tour-card">
+              <img
+                class="tour-img"
+                src="https://www.w3schools.com/w3images/paris.jpg"
+                alt="Paris"
+              />
+              <div class="tour-content">
+                <h3 class="tour-city">Paris</h3>
+                <p class="tour-date">Sat 28 Nov 2016</p>
+                <p clss="tour-description">
+                  Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                </p>
+                <button class="tour-btn">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="tour-card">
+              <img
+                class="tour-img"
+                src="https://www.w3schools.com/w3images/sanfran.jpg"
+                alt="san Francisco"
+              />
+              <div class="tour-content">
+                <h3 class="tour-city">San Francisco</h3>
+                <p class="tour-date">Sun 29 Nov 2016</p>
+                <p class="tour-description">
+                  Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                </p>
+                <button class="tour-btn">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="member-item">
-          <p class="member-name">Name</p>
-          <img
-            class="member-img"
-            src="https://www.w3schools.com/w3images/bandmember.jpg"
-            alt="anh"
-          />
-        </div>
-        <div class="member-item">
-          <p class="member-name">Name</p>
-          <img
-            class="member-img"
-            src="https://www.w3schools.com/w3images/bandmember.jpg"
-            alt="anh"
-          />
-        </div>
-      </div>
+      </section>
+      <section class="contact-section">
+        <div class="contact-container">
+          <div class="contact-header">
+            <h2 class="section-title">CONTACT</h2>
+            <p class="section-subtitle">Fan? Drop a note!</p>
+          </div>
 
-      <!-- TOUR DATES -->
-      <section class="tour">
-        <div class="tour-header">
-          <h2 class="section-title">TOUR DATES</h2>
-          <p class="section-subtitle">Remember to book your tickets!</p>
-        </div>
-        <div class="tours">
-          <ul class="tours-list">
-            <li class="tours-item">
-              September
-              <span class="sold-out">Sold out</span>
-            </li>
-            <li class="tours-item">
-              October
-              <span class="sold-out">Sold out</span>
-            </li>
-            <li class="tours-item">
-              November
-              <span class="ba">3</span>
-            </li>
-          </ul>
-        </div>
-        <div class="usa">
-          <div class="usa-card">
-            <img
-              class="usa-img"
-              src="https://www.w3schools.com/w3images/newyork.jpg"
-              alt="New York"
-            />
-            <div class="usa-content">
-              <h3 class="usa-place">New York</h3>
-              <p class="usa-date">Fri 27 Nov 2016</p>
-              <p class="usa-desc">
-                Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+          <div class="contact-content">
+            <!-- Thông tin liên hệ -->
+            <div class="contact-info">
+              <p class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                Chicago, US
               </p>
-              <a class="buy-btn">Buy Tickets</a>
-            </div>
-          </div>
-          <div class="usa-card">
-            <img
-              class="usa-img"
-              src="https://www.w3schools.com/w3images/paris.jpg"
-              alt="Paris"
-            />
-            <div class="usa-content">
-              <h3 class="usa-place">Paris</h3>
-              <p class="usa-date">Sat 28 Nov 2016</p>
-              <p class="usa-desc">
-                Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              <p class="contact-item">
+                <i class="fa fa-phone"></i>
+                Phone: +00112234
               </p>
-              <a class="buy-btn">Buy Tickets</a>
-            </div>
-          </div>
-          <div class="usa-card">
-            <img
-              class="usa-img"
-              src="https://www.w3schools.com/w3images/sanfran.jpg"
-              alt="san Francisco"
-            />
-            <div class="usa-content">
-              <h3 class="usa-place">San Francisco</h3>
-              <p class="usa-date">Sat 29 Nov 2016</p>
-              <p class="usa-desc">
-                Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+              <p class="contact-item">
+                <i class="fa fa-envelope"></i>
+                Email: email@email.com
               </p>
-              <a class="buy-btn">Buy Tickets</a>
             </div>
-          </div>
-        </div>
 
-        <div class="lienhe">
-          <h2 class="section-title">CONTACT</h2>
-          <p class="section-subtitle">Fan? Drop a note!</p>
-          <div class="lienhe-mot">
-            <div class="lienhe-hai">
-              <i class="fa fa-map-marker"></i>
-              Chicago, US<br />
-              <i class="fa fa-phone"></i>
-              phone: +00112234<br />
-              <i class="fa fa-envelope"></i>
-              Email: email@email.com<br />
-            </div>
-            <div class="lienhe-ba">
-              <form class="lienhe-bon">
-                <div class="name">
-                  <input class="thongtin" type="text" placeholder="Name" />
-                  <input class="thongtin" type="email" placeholder="Email" />
+            <!-- Form -->
+            <div class="contact-form">
+              <form class="form">
+                <div class="form-row">
+                  <input class="form-input" type="text" placeholder="Name" />
+                  <input class="form-input" type="email" placeholder="Email" />
                 </div>
-                <input class="thongtin1" type="text" placeholder="Message" />
-                <a class="send" type="submit">SEND</a>
+                <input
+                  class="form-input form-message"
+                  type="text"
+                  placeholder="Message"
+                />
+                <button class="send-btn">SEND</button>
               </form>
             </div>
           </div>
         </div>
-        <img
-          class="map"
-          src="https://www.w3schools.com/w3images/map.jpg"
-          alt="anh"
-          style="width: 100%"
-        />
+        <div class="anh">
+          <img
+            class="maps"
+            src="https://www.w3schools.com/w3images/map.jpg"
+            alt="map"
+          />
+        </div>
       </section>
     </main>
     <footer class="footers">
@@ -278,7 +309,7 @@
         <div class="modal-footer">
           <button class="close-btn">Close <i class="fa fa-remove"></i></button>
 
-          <p>Need <a href="#">help?</a></p>
+          <p class="need">Need <a href="#">help?</a></p>
         </div>
       </div>
     </div>
