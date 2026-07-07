@@ -37,6 +37,7 @@ body {
 }
 .nav-menu {
   display: flex;
+  margin-right: auto;
 }
 .nav-link {
   display: block;
@@ -299,7 +300,7 @@ body {
   background-color: rgb(203, 215, 215);
   color: black;
 }
-.anh {
+.map-container {
   width: 100%;
 }
 .maps {
@@ -405,158 +406,4 @@ body {
 }
 .need a {
   color: rgb(19, 167, 201);
-}
-
-/* ==========================
-   Tablet
-========================== */
-@media (max-width: 1024px) {
-  .band-section,
-  .tour-container,
-  .contact-container {
-    width: 90%;
-  }
-
-  .member-img {
-    width: 80%;
-  }
-
-  .modal-container {
-    width: 90%;
-  }
-}
-/* ==========================
-   Mobile
-========================== */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    background-color: rgb(0, 0, 0);
-  }
-
-  .home {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 16px;
-  }
-  .nav-menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background: black;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 16px;
-    width: 100%;
-  }
-  .nav-link:hover {
-    background: #000000;
-    color: #ffffff;
-  }
-
-  .search-btn {
-    display: none;
-  }
-  .menu-toggle {
-    display: block;
-    color: #fff;
-    background: #000;
-    padding: 12px 16px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-bottom: auto;
-  }
-  .menu-toggle:hover {
-    background: #ccc;
-    color: #000;
-  }
-
-  .dropdown {
-    width: 100%;
-  }
-
-  .dropdown-menu {
-    position: static;
-  }
-
-  /* Slider */
-  .slide-content {
-    bottom: 20px;
-    display: none;
-  }
-
-  .slide-title {
-    font-size: 18px;
-  }
-
-  .slide-text {
-    font-size: 13px;
-  }
-
-  /* Member */
-  .member-item {
-    float: none;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .member-img {
-    width: 70%;
-  }
-
-  /* Tour */
-  .tour-card {
-    float: none;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  /* Contact */
-  .contact-info,
-  .contact-form {
-    float: none;
-    width: 100%;
-  }
-
-  .contact-form {
-    margin-top: 20px;
-  }
-
-  .form-input,
-  .form-message {
-    width: 100%;
-    margin: 8px 0;
-  }
-
-  .send-btn {
-    float: none;
-    width: 100%;
-  }
-
-  /* Modal */
-  .modal-container {
-    width: 95%;
-  }
-
-  .modal-header {
-    font-size: 22px;
-    padding: 25px 10px;
-  }
-
-  .modal-footer {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
 }
