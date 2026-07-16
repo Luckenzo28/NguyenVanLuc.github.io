@@ -1,0 +1,317 @@
+/* ::first-letter thay đổi chữ cái đầu
+::first-line thay đổi dòng đầu của đoạn văn
+::selection làm thay đổi màu đoạn văn
+::marker style cho dấu chấm hoặc số của danh sách
+::placeholder style của nội trong input
+::after là phần tử giả được đặt cuối phần tử
+::before đặt đầu phần tử
+inset viết tắt của top right bottom left
+trong after và before bắt buộc phải có content:"" để làm phần tử giả
+
+position:relative phần tử cố định trong layout có thể dịch chuyển bằn top right bottom left
+position:absolute vị trí của absolute phải phụ thuộc vào phần tử cha, phần tử cha hay dùng là relative
+position:fixed là cố định so với màn hình, khi cuộn trang không bị di chuyển
+position: sticky bám lại khi cuộn tới vị trí xác định của nó
+
+
+scroll-behavior: smooth cuộn mượt 
+scroll-bahavior: auto cuộn ngay lập tức  */
+
+/* Kiến thức	Mức độ
+href="#id"	⭐⭐⭐⭐⭐
+id	⭐⭐⭐⭐⭐
+scroll-behavior	⭐⭐⭐⭐⭐
+scroll-margin-top	⭐⭐⭐⭐⭐
+scroll-padding-top	⭐⭐⭐⭐⭐
+position: fixed	⭐⭐⭐⭐⭐
+scrollIntoView()	⭐⭐⭐⭐⭐
+window.scrollTo()	⭐⭐⭐⭐
+offsetTop	⭐⭐⭐⭐
+scrollY	⭐⭐⭐⭐
+scroll event	⭐⭐⭐⭐
+overflow: visible mặc định chữ bị tràn và đè ra khung
+          hidden chữ bị cắt, bị ẩn không xem được
+          scroll luôn hiện thị thanh cuộn dù k bị tràn
+          auto chữ dài mới hiện thành cuộn còn k thì nó không hiện */
+
+/* ===========================
+   RESET
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+}
+.header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blanchedalmond;
+  padding: 16px;
+}
+.logo {
+  font-weight: 800;
+}
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+.nav-item {
+  list-style: none;
+}
+.nav-link {
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+}
+.active {
+  color: rgb(0, 184, 148);
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(11, 176, 221);
+  margin-top: 70px;
+}
+.section-title,
+.section-desc {
+  padding: 10px;
+  text-align: center;
+}
+#home,
+#about,
+#skills,
+#projects,
+#gallery,
+#contact {
+  height: 100vh;
+  padding: 60px;
+}
+.btn-group {
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+.btn {
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 0 5px;
+  border: none;
+  background: rgb(0, 184, 148);
+  color: white;
+}
+.btn:hover {
+  transform: translateY(-5px);
+}
+#about {
+  background: rgb(225, 218, 218);
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+.section-descs {
+  margin: auto;
+}
+.skills-list {
+  margin: 15px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.skill-item {
+  transition: 0.3s;
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 5px;
+}
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+.btn-primary {
+  margin: 20px 0;
+}
+#projects {
+  background: rgb(74, 64, 64);
+}
+.projects-list {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.project-item {
+  padding: 100px 20px;
+  background: rgb(0, 184, 148);
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.project-item:hover {
+  transform: scale(1.05);
+}
+#gallery {
+  background: rgb(196, 157, 157);
+}
+.card-list {
+  border: 1px solid black;
+  border-radius: 5px;
+
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
+  background: rgb(0, 184, 148);
+  padding: 20px;
+  font-size: 30px;
+}
+#contact {
+  background: rgb(186, 194, 195);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-desca {
+  margin: 20px 0;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+     1. ::first-letter
+  =========================== */
+.demo-first-letter p::first-letter {
+  font-size: 40px;
+  font-weight: bold;
+  color: #00b894;
+  float: left;
+  margin-right: 8px;
+  line-height: 1;
+}
+
+/* ===========================
+     2. ::first-line
+  =========================== */
+.demo-first-line p::first-line {
+  font-weight: bold;
+  color: #0984e3;
+  text-transform: uppercase;
+}
+
+/* ===========================
+     3. ::selection
+  =========================== */
+.demo-selection p::selection {
+  background: #fdcb6e;
+  color: black;
+}
+
+/* ===========================
+     4. ::marker
+  =========================== */
+.demo-marker ul {
+  padding-left: 30px;
+}
+.demo-marker li::marker {
+  color: #e17055;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ===========================
+     5. ::placeholder
+  =========================== */
+.demo-placeholder input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+.demo-placeholder input::placeholder {
+  color: #b2bec3;
+  font-style: italic;
+}
+
+/* ===========================
+     6. ::before
+  =========================== */
+.demo-before span::before {
+  content: "🔥";
+}
+
+/* ===========================
+     7. ::after
+  =========================== */
+.demo-after span::after {
+  content: "(Mới)";
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+  .btn-group {
+    flex-wrap: wrap;
+  }
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+}
