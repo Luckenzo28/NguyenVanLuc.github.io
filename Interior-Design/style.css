@@ -9,13 +9,13 @@ inset viết tắt của top right bottom left
 trong after và before bắt buộc phải có content:"" để làm phần tử giả
 
 position:relative phần tử cố định trong layout có thể dịch chuyển bằn top right bottom left
-position:absolute vị trí của absolute phải phụ thuộc vào phần tử cha, phần tử cha hay dùng là relative
+position:absolute 
 position:fixed là cố định so với màn hình, khi cuộn trang không bị di chuyển
 position: sticky bám lại khi cuộn tới vị trí xác định của nó
 
 
 scroll-behavior: smooth cuộn mượt 
-scroll-bahavior: auto cuộn ngay lập tức  */
+scroll-behavior: auto cuộn ngay lập tức  */
 
 /* Kiến thức	Mức độ
 href="#id"	⭐⭐⭐⭐⭐
@@ -32,7 +32,30 @@ scroll event	⭐⭐⭐⭐
 overflow: visible mặc định chữ bị tràn và đè ra khung
           hidden chữ bị cắt, bị ẩn không xem được
           scroll luôn hiện thị thanh cuộn dù k bị tràn
-          auto chữ dài mới hiện thành cuộn còn k thì nó không hiện */
+          auto chữ dài mới hiện thành cuộn còn k thì nó không hiện 
+          
+          
+          
+Pseudo-class	Công dụng	Mức độ
+:hover	Khi đưa chuột vào	⭐⭐⭐⭐⭐
+:active	Khi đang nhấn chuột	⭐⭐⭐⭐⭐
+:focus	Khi phần tử được chọn (input, textarea...)	⭐⭐⭐⭐⭐
+:focus-visible	Khi focus bằng bàn phím	⭐⭐⭐⭐
+:focus-within	Khi phần tử con được focus	⭐⭐⭐
+:visited	Link đã truy cập	⭐⭐⭐⭐
+:link	Link chưa truy cập	⭐⭐⭐
+:checked	Checkbox hoặc Radio được chọn	⭐⭐⭐⭐
+:disabled	Input/Button bị vô hiệu hóa	⭐⭐⭐⭐
+:enabled	Input/Button đang hoạt động	⭐⭐⭐
+:required	Ô nhập bắt buộc	⭐⭐⭐
+:valid	Dữ liệu hợp lệ	⭐⭐⭐⭐
+:invalid	Dữ liệu không hợp lệ	⭐⭐⭐⭐
+:first-child	Phần tử con đầu tiên	⭐⭐⭐⭐
+:last-child	Phần tử con cuối cùng	⭐⭐⭐⭐
+:nth-child()	Chọn phần tử theo vị trí	⭐⭐⭐⭐⭐
+:nth-of-type()	Chọn phần tử cùng loại theo vị trí	⭐⭐⭐⭐
+:not()	Loại trừ phần tử	⭐⭐⭐⭐⭐
+:empty	Phần tử không có nội dung	⭐⭐⭐*/
 
 /* ===========================
    RESET
@@ -183,7 +206,6 @@ body {
 .card-list {
   border: 1px solid black;
   border-radius: 5px;
-
   width: 100%;
   height: 400px;
   overflow: auto;
@@ -203,7 +225,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 .section-desca {
   margin: 20px 0;
@@ -276,6 +298,7 @@ h3 {
 .demo-placeholder input::placeholder {
   color: #b2bec3;
   font-style: italic;
+  color: red;
 }
 
 /* ===========================
@@ -315,3 +338,11 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+/* fisrt-letter thay đổi chữ cái đầu tiên
+fisrt-line thay đổi dòng đầu tiên của văn bản
+before làm phần tử giả ở đầu phần tử 
+after làm phần tử giả ở cuối phần tử
+selection làm thay đổi văn bản khi người dùng bôi đen
+marker định dạng dấu đầu dòng của danh sách ol,ul,li
+placeholder dùng định dạng văn bản gợi ý bên trong các ô nhập */

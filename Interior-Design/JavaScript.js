@@ -1,374 +1,152 @@
-// ===========================
-// 1. SCROLL CÁC NÚT TRONG SECTION HOME
-// ===========================
+/*
+Cuối tuần, tuần sau mục tiêu hoàn thành các mục sau:
+✅ console
+✅ Math
+✅ Date
+✅ JSON
+✅ String
+✅ Number
+✅ Array
+✅ Object
+✅ document (DOM)
+✅ window (BOM)
+✅ setTimeout() / setInterval()
+✅ localStorage
+ */
 
-// Learn More → cuộn tới section About bằng scrollIntoView()
-document.getElementById("learnMoreBtn").addEventListener("click", () => {
-  document.getElementById("about").scrollIntoView({
-    behavior: "smooth",
-  });
-});
+let name = "luc";
+let age = 15;
 
-// Scroll Down 500px → cuộn thêm 500px từ vị trí hiện tại bằng scrollBy()
-document.getElementById("scrollDown500Btn").addEventListener("click", () => {
-  window.scrollBy({
-    top: 500,
-    behavior: "smooth",
-  });
-});
+console.log("hello world"); // console.log dùng để in dữ liệu hiển thị thông tin
 
-// Go Bottom → cuộn thẳng xuống cuối trang bằng scrollTo()
-document.getElementById("goBottomBtn").addEventListener("click", () => {
-  window.scrollTo({
-    top: document.body.scrollHeight,
-    behavior: "smooth",
-  });
-});
+const pi = 3.14;
+const country = "vietnam";
+console.log(country); //  console.log dùng để in dữ liệu
 
-// ===========================
-// 2. SCROLL TRONG SECTION SKILLS
-// ===========================
+/*let có thể thay đổi giá trị 
+       let age=20;
+       age=21;
+   console.log(age); đúng
 
-// Go Contact → cuộn tới section Contact
-document.getElementById("goContactBtn").addEventListener("click", () => {
-  document.getElementById("contact").scrollIntoView({
-    behavior: "smooth",
-  });
-});
+   let age=21;
+   let age=22; sai vì nó k được khai báo lại trong cùng phạm vi
 
-// ===========================
-// 3. SCROLL TRONG SECTION GALLERY
-// ===========================
+   còn const thì ngược lại let*/
 
-// Go To Card 8 → cuộn tới card8 (nằm bên trong .card-list có overflow riêng)
-document.getElementById("goToCard8Btn").addEventListener("click", () => {
-  document.getElementById("card8").scrollIntoView({
-    behavior: "smooth",
-    block: "nearest", // tránh kéo cả trang chính cuộn theo, chỉ cuộn bên trong .card-list
-  });
-});
+console.warn("warning"); //dùng để hiển thị thông báo cảnh báo
 
-// ===========================
-// 4. SCROLL TRONG SECTION CONTACT
-// ===========================
-
-// Scroll Up 400px → cuộn lên trên 400px bằng scrollBy() với giá trị âm
-document.getElementById("scrollUp400Btn").addEventListener("click", () => {
-  window.scrollBy({
-    top: -400,
-    behavior: "smooth",
-  });
-});
-
-// ===========================
-// 5. ACTIVE MENU KHI CUỘN TRANG (dùng scrollY + offsetTop)
-// ===========================
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  const headerHeight = document.getElementById("header").offsetHeight;
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - headerHeight - 10; // trừ thêm khoảng đệm
-    const sectionHeight = section.offsetHeight;
-
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
-    ) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-});
-
-// ===========================
-// 6. FORM VALIDATION
-// ===========================
-
-const form = document.getElementById("myForm");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  let isValid = true;
-  const inputs = form.querySelectorAll("input");
-
-  inputs.forEach((input) => {
-    clearError(input);
-
-    if (input.required && input.type === "checkbox" && !input.checked) {
-      showError(input, "Bạn phải đồng ý điều khoản");
-      isValid = false;
-      return;
-    }
-
-    if (input.type === "checkbox") return;
-
-    if (input.required && input.value.trim() === "") {
-      showError(input, "Trường này không được để trống");
-      isValid = false;
-      return;
-    }
-
-    if (input.value.trim() === "") return;
-
-    if (input.minLength > 0 && input.value.length < input.minLength) {
-      showError(input, `Tối thiểu ${input.minLength} ký tự`);
-      isValid = false;
-    }
-
-    if (input.maxLength > 0 && input.value.length > input.maxLength) {
-      showError(input, `Tối đa ${input.maxLength} ký tự`);
-      isValid = false;
-    }
-
-    if (input.type === "email") {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(input.value)) {
-        showError(input, "Email không đúng định dạng");
-        isValid = false;
-      }
-    }
-
-    if (input.type === "number") {
-      const val = Number(input.value);
-      if (input.min && val < Number(input.min)) {
-        showError(input, `Giá trị tối thiểu là ${input.min}`);
-        isValid = false;
-      }
-      if (input.max && val > Number(input.max)) {
-        showError(input, `Giá trị tối đa là ${input.max}`);
-        isValid = false;
-      }
-    }
-
-    if (input.pattern) {
-      const regex = new RegExp(input.pattern);
-      if (!regex.test(input.value)) {
-        showError(input, "Định dạng không hợp lệ");
-        isValid = false;
-      }
-    }
-  });
-
-  if (isValid) {
-    alert("Form hợp lệ! Đang submit...");
-    // form.submit();
-  }
-});
-
-function showError(input, message) {
-  input.classList.add("error");
-  let errorEl = input.nextElementSibling;
-  if (!errorEl || !errorEl.classList.contains("error-message")) {
-    errorEl = document.createElement("span");
-    errorEl.classList.add("error-message");
-    input.after(errorEl);
-  }
-  errorEl.textContent = message;
+if (age < 18) {
+  console.warn("bạn chưa đủ 18 tuổi.");
 }
 
-function clearError(input) {
-  input.classList.remove("error");
-  const errorEl = input.nextElementSibling;
-  if (errorEl && errorEl.classList.contains("error-message")) {
-    errorEl.remove();
-  }
-}
-/*// ===========================
-// 1. SCROLL CÁC NÚT TRONG SECTION HOME
-// ===========================
-
-// Learn More → cuộn tới section About bằng scrollIntoView()
-document.getElementById("learnMoreBtn").addEventListener("click", () => {
-  document.getElementById("about").scrollIntoView({
-    behavior: "smooth",
-  });
-});
-
-// Scroll Down 500px → cuộn thêm 500px từ vị trí hiện tại bằng scrollBy()
-document.getElementById("scrollDown500Btn").addEventListener("click", () => {
-  window.scrollBy({
-    top: 500,
-    behavior: "smooth",
-  });
-});
-
-// Go Bottom → cuộn thẳng xuống cuối trang bằng scrollTo()
-document.getElementById("goBottomBtn").addEventListener("click", () => {
-  window.scrollTo({
-    top: document.body.scrollHeight,
-    behavior: "smooth",
-  });
-});
-
-// ===========================
-// 2. SCROLL TRONG SECTION SKILLS
-// ===========================
-
-// Go Contact → cuộn tới section Contact
-document.getElementById("goContactBtn").addEventListener("click", () => {
-  document.getElementById("contact").scrollIntoView({
-    behavior: "smooth",
-  });
-});
-
-// ===========================
-// 3. SCROLL TRONG SECTION GALLERY
-// ===========================
-
-// Go To Card 8 → cuộn tới card8 (nằm bên trong .card-list có overflow riêng)
-document.getElementById("goToCard8Btn").addEventListener("click", () => {
-  document.getElementById("card8").scrollIntoView({
-    behavior: "smooth",
-    block: "nearest", // tránh kéo cả trang chính cuộn theo, chỉ cuộn bên trong .card-list
-  });
-});
-
-// ===========================
-// 4. SCROLL TRONG SECTION CONTACT
-// ===========================
-
-// Scroll Up 400px → cuộn lên trên 400px bằng scrollBy() với giá trị âm
-document.getElementById("scrollUp400Btn").addEventListener("click", () => {
-  window.scrollBy({
-    top: -400,
-    behavior: "smooth",
-  });
-});
-
-// ===========================
-// 5. ACTIVE MENU KHI CUỘN TRANG (dùng scrollY + offsetTop)
-// ===========================
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  const headerHeight = document.getElementById("header").offsetHeight;
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - headerHeight - 10; // trừ thêm khoảng đệm
-    const sectionHeight = section.offsetHeight;
-
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
-    ) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-});
-
-// ===========================
-// 6. FORM VALIDATION
-// ===========================
-
-const form = document.getElementById("myForm");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  let isValid = true;
-  const inputs = form.querySelectorAll("input");
-
-  inputs.forEach((input) => {
-    clearError(input);
-
-    if (input.required && input.type === "checkbox" && !input.checked) {
-      showError(input, "Bạn phải đồng ý điều khoản");
-      isValid = false;
-      return;
-    }
-
-    if (input.type === "checkbox") return;
-
-    if (input.required && input.value.trim() === "") {
-      showError(input, "Trường này không được để trống");
-      isValid = false;
-      return;
-    }
-
-    if (input.value.trim() === "") return;
-
-    if (input.minLength > 0 && input.value.length < input.minLength) {
-      showError(input, `Tối thiểu ${input.minLength} ký tự`);
-      isValid = false;
-    }
-
-    if (input.maxLength > 0 && input.value.length > input.maxLength) {
-      showError(input, `Tối đa ${input.maxLength} ký tự`);
-      isValid = false;
-    }
-
-    if (input.type === "email") {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(input.value)) {
-        showError(input, "Email không đúng định dạng");
-        isValid = false;
-      }
-    }
-
-    if (input.type === "number") {
-      const val = Number(input.value);
-      if (input.min && val < Number(input.min)) {
-        showError(input, `Giá trị tối thiểu là ${input.min}`);
-        isValid = false;
-      }
-      if (input.max && val > Number(input.max)) {
-        showError(input, `Giá trị tối đa là ${input.max}`);
-        isValid = false;
-      }
-    }
-
-    if (input.pattern) {
-      const regex = new RegExp(input.pattern);
-      if (!regex.test(input.value)) {
-        showError(input, "Định dạng không hợp lệ");
-        isValid = false;
-      }
-    }
-  });
-
-  if (isValid) {
-    alert("Form hợp lệ! Đang submit...");
-    // form.submit();
-  }
-});
-
-function showError(input, message) {
-  input.classList.add("error");
-  let errorEl = input.nextElementSibling;
-  if (!errorEl || !errorEl.classList.contains("error-message")) {
-    errorEl = document.createElement("span");
-    errorEl.classList.add("error-message");
-    input.after(errorEl);
-  }
-  errorEl.textContent = message;
+let password = "";
+if (password === "") {
+  console.error("mật khẩu của bạn không được để trống."); //dùng để thông báo lỗi xuất hiện với màu đỏ trong console
 }
 
-function clearError(input) {
-  input.classList.remove("error");
-  const errorEl = input.nextElementSibling;
-  if (errorEl && errorEl.classList.contains("error-message")) {
-    errorEl.remove();
-  }
-} */
+if (age >= 18) {
+  console.log("bạn đã đủ 18 tuổi.");
+} else {
+  console.log("bạn chưa đủ 18 tuổi.");
+}
+// if Chạy khi điều kiện đúng
+//else Chạy khi điều kiện sai
+
+/* ==   // Bằng
+   ===  // Bằng cả giá trị và kiểu dữ liệu
+   !=   // Khác
+   !==  // Khác cả giá trị và kiểu
+   >
+   <
+   >=
+   <= 
+   
+AND (&&)
+let age = 20;
+let hasID = true;
+
+if (age >= 18 && hasID) {
+    console.log("Được vào");
+}
+
+Điều kiện chỉ đúng khi cả hai đều đúng.
+
+OR (||)
+let isAdmin = false;
+let isTeacher = true;
+
+if (isAdmin || isTeacher) {
+    console.log("Có quyền truy cập");
+}
+
+Chỉ cần một trong hai đúng.
+
+NOT (!)
+let isLogin = false;
+
+if (!isLogin) {
+    console.log("Vui lòng đăng nhập");
+}
+
+!false sẽ thành true.
+   */
+
+const student = {
+  name: "Luc",
+  tuoi: 22,
+  major: "It",
+};
+console.table(student); //dùng để hiển thị dữ liệu dạng bảng làm việc với mảng và object.
+
+/* console.clear(); //dùng để xóa toàn bộ dưx liệu trong console. */
+
+let radius = 5;
+let area = Math.PI * radius * radius;
+
+console.log(area);
+
+let ramdom = Math.floor(Math.random() * 10);
+console.log(ramdom);
+console.log(Math.ceil(5.2)); //làm tròn lên
+console.log(Math.round(5.4)); //làm tròn theo quy tắc thông thường <0.5 hoặc>=0.5
+console.log(Math.max(3, 5, 2, 5, 7)); //tìm số lớn nhất
+console.log(Math.pow(2, 3)); // tìm số lũy thừa 2 mũ 3
+//sqrt căn bậc 2
+//abs giá trị tuyệt đối
+
+let now = new Date();
+console.log(now); //new date() sẽ lấy thời gian hiện tại của máy tính
+console.log(now.getFullYear());
+console.log(now.getMonth() + 1);
+console.log(now.getDate());
+console.log(now.getDay() + 1);
+console.log(now.getHours());
+console.log(now.getMinutes());
+console.log(now.getSeconds());
+
+//hoàn chỉnh ngày giờ hoàn chỉnh
+console.log(
+  now.getDate() + "/" + (now.getMonth() + 1) + "/" + now.getFullYear(),
+);
+console.log(now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
+
+//JSON
+
+let json = JSON.stringify(student); //chuyển Object thành chuỗi JSON
+console.log(json);
+
+console.log(student);
+console.info("Đăng nhập thành công");
+console.warn("Mật khẩu yếu");
+console.error("Không kết nối được máy chủ");
+console.table(student);
+
+console.time("test");
+
+for (let i = 0; i < 1000000; i++) {}
+
+console.timeEnd("test");
+
+console.count("Click");
+
+console.assert(student.age >= 18, "Chưa đủ tuổi");
