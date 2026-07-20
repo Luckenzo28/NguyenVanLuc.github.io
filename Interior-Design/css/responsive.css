@@ -1,0 +1,40 @@
+@media (max-width: 900px) {
+  .header {
+    display: flex;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 140;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .sidebar {
+    z-index: 150;
+    left: -500px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .close-btn {
+    display: block;
+  }
+
+  .main {
+    margin: 75px 0 0;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+}

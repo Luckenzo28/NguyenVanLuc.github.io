@@ -2,154 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Validation</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="JavaScript.js" defer></script>
+
+    <title>Interior Design</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/header.css" />
+
+    <link rel="stylesheet" href="css/sidebar.css" />
+
+    <link rel="stylesheet" href="css/showcase.css" />
+
+    <link rel="stylesheet" href="css/services.css" />
+
+    <link rel="stylesheet" href="css/designers.css" />
+
+    <link rel="stylesheet" href="css/packages.css" />
+
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
+
   <body>
-    <header id="header" class="header">
-      <div class="logo">LOGO</div>
-      <nav class="navbar">
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
-          </li>
+    <div id="home"></div>
+    <div id="header"></div>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div id="sidebar"></div>
 
-    <section id="home">
-      <h2 class="section-title">Welcome To My Website</h2>
-      <p class="section-desc">
-        practice Scroll API with HTML, CSS and JavaScript
-      </p>
-      <div class="btn-group">
-        <button class="btn btn-primary" id="learnMoreBtn">Learn More</button>
-        <button class="btn btn-secondary" id="scrollDown500Btn">
-          Scroll Down 500px
-        </button>
-        <button class="btn btn-outline" id="goBottomBtn">Go Bottom</button>
-      </div>
-    </section>
+    <main class="main">
+      <div id="showcase"></div>
 
-    <section id="about">
-      <h2 class="section-title">About</h2>
-      <p class="section-descs">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-    </section>
+      <div id="services"></div>
 
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-list">
-        <div class="skill-item">HTML</div>
-        <div class="skill-item">CSS</div>
-        <div class="skill-item">JavaScript</div>
-        <div class="skill-item">Responsive</div>
-      </div>
-      <button class="btn btn-primary" id="goContactBtn">Go Contact</button>
-    </section>
+      <div id="designers"></div>
 
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-list">
-        <div class="project-item">Project 1</div>
-        <div class="project-item">Project 2</div>
-        <div class="project-item">Project 3</div>
-      </div>
-    </section>
+      <div id="packages"></div>
 
-    <section id="gallery">
-      <h2 class="section-title">Gallery</h2>
-      <button class="btn btn-primary" id="goToCard8Btn">Go To Card 8</button>
-      <div class="card-list">
-        <div class="card" id="card1">Card 1</div>
-        <div class="card" id="card2">Card 2</div>
-        <div class="card" id="card3">Card 3</div>
-        <div class="card" id="card4">Card 4</div>
-        <div class="card" id="card5">Card 5</div>
-        <div class="card" id="card6">Card 6</div>
-        <div class="card" id="card7">Card 7</div>
-        <div class="card" id="card8">Card 8</div>
-        <div class="card" id="card9">Card 9</div>
-        <div class="card" id="card10">Card 10</div>
-      </div>
-    </section>
+      <div id="contact"></div>
+    </main>
 
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-desca">Thank you for visiting my website.</p>
-      <button class="btn btn-outline" id="scrollUp400Btn">
-        Scroll Up 400px
-      </button>
-    </section>
+    <div id="footer"></div>
 
-    <div class="box demo-first-letter">
-      <h3>::first-letter</h3>
-      <p>
-        Đây là đoạn văn demo cho hiệu ứng first-letter. Chữ cái đầu tiên sẽ được
-        phóng to và đổi màu, thường dùng trong báo/tạp chí. Chữ cái đầu tiên sẽ
-        được phóng to và đổi màu, thường dùng trong báo/tạp chí.
-      </p>
-    </div>
-    <br />
+    <script src="js/main.js"></script>
 
-    <div class="box demo-first-line">
-      <h3>::first-line</h3>
-      <p>
-        Dòng đầu tiên của đoạn văn này sẽ được in đậm và đổi màu. Các dòng tiếp
-        theo vẫn giữ nguyên định dạng bình thường, không bị ảnh hưởng bởi style
-        của dòng đầu.
-      </p>
-    </div>
+    <script src="js/sidebar.js"></script>
 
-    <div class="box demo-selection">
-      <h3>::selection (thử bôi đen đoạn text dưới đây)</h3>
-      <p>
-        Hãy dùng chuột bôi đen (select) đoạn văn bản này để thấy màu nền đổi
-        thành vàng thay vì màu xanh mặc định của trình duyệt.
-      </p>
-    </div>
+    <script src="js/showcase.js"></script>
 
-    <div class="box demo-marker">
-      <h3>::marker</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
+    <script src="js/form.js"></script>
 
-    <div class="box demo-placeholder">
-      <h3>::placeholder</h3>
-      <input type="text" placeholder="Nhập tên của bạn..." />
-    </div>
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
 
-    <div class="box demo-before">
-      <h3>::before</h3>
-      <span>Nội dung chính</span>
-    </div>
+      <img class="modal-image" id="modalImage" />
 
-    <div class="box demo-after">
-      <h3>::after</h3>
-      <span>Sản phẩm A</span>
+      <p id="caption"></p>
     </div>
   </body>
 </html>

@@ -1,0 +1,20 @@
+.footer {
+  margin-top: 75px;
+  padding: 32px 58px;
+  background-color: #f1f1f1;
+  text-align: right;
+}
+
+.footer p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+
+.footer a {
+  color: #000;
+}
+
+.footer a:hover {
+  opacity: 0.6;
+}

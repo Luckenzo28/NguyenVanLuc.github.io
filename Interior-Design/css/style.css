@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.main {
+  margin-left: 380px;
+  padding: 80px 80px 0 0;
+}
+#home,
+#services,
+#designers,
+#packages,
+#contact {
+  scroll-margin-top: 75px;
+}
