@@ -38,3 +38,12 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .gallery,
+  .package-list,
+  .designer-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
