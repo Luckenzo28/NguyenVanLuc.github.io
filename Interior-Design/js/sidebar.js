@@ -3,6 +3,7 @@ function initSidebar() {
   const sidebar = document.querySelector(".sidebar");
   const closeBtn = document.querySelector(".close-btn");
   const overlay = document.querySelector(".overlay");
+  const menuLinks = document.querySelectorAll(".menu a");
 
   menuBtn.addEventListener("click", () => {
     sidebar.classList.add("active");
@@ -17,5 +18,11 @@ function initSidebar() {
   overlay.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
+  });
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    });
   });
 }
