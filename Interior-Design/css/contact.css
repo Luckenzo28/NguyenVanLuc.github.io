@@ -67,3 +67,6 @@
 input.error-input {
   border: 2px solid red;
 }
+.cancel:hover {
+  background: blue;
+}
