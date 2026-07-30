@@ -1,1 +1,786 @@
-﻿
+﻿/* ==================================================
+   RESET CSS
+================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f1ea;
+  color: #1b1812;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ==================================================
+   CSS VARIABLES
+================================================== */
+
+:root {
+  --bg: #f4f1ea;
+  --paper: #faf8f3;
+  --dark: #17140f;
+  --text: #1b1812;
+  --accent: #8a6d45;
+  --line: #d8d0c0;
+  --white: #ffffff;
+}
+
+/* ==================================================
+   BASE
+================================================== */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  margin: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.font-display {
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 42px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::before {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: var(--accent);
+  display: block;
+  margin: 0 auto 15px;
+}
+
+p {
+  color: #555;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: var(--dark);
+  color: white;
+  border: 1px solid var(--dark);
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.btn:focus {
+  outline: 3px solid orange;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: black;
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+#site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 248, 243, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  z-index: 999;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: 0.3s;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.icons a {
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  transform: scale(1.2);
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1600&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: #ddd;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.hero-text {
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* ==================================================
+   SHOP CATEGORY
+================================================== */
+
+.category-filter {
+  width: 220px;
+  margin: 0 auto 40px;
+  padding: 25px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.category-filter h3 {
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.category-filter ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.category-filter ul li:last-child {
+  border-bottom: none;
+}
+
+.category-filter a {
+  transition: 0.3s;
+}
+
+.category-filter a:hover {
+  color: var(--accent);
+  padding-left: 8px;
+}
+
+/* ==================================================
+   CATEGORY GRID
+================================================== */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.category-grid figure {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.category-grid img {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.category-grid figure:hover img {
+  transform: scale(1.08);
+}
+
+.category-grid figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+}
+
+.category-grid h3 {
+  margin-bottom: 12px;
+}
+
+/* ==================================================
+   PRODUCTS
+================================================== */
+
+.products {
+  background: var(--paper);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-grid article {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 20px;
+  transition: 0.35s;
+}
+
+.product-grid article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-grid article img {
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.product-grid article h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.price::after {
+  content: " VND";
+  font-size: 12px;
+  color: #777;
+}
+
+.product-grid article:nth-child(odd) {
+  background: #fff;
+}
+
+.product-grid article:nth-child(even) {
+  background: #fcfbf8;
+}
+
+/* ==================================================
+   SALE BANNER
+================================================== */
+
+#sale-banner {
+  text-align: center;
+  padding: 100px 20px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+#sale-banner h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+#sale-banner p {
+  color: #eee;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text h2 {
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  margin-bottom: 18px;
+}
+
+.about-text ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.about-text ul li {
+  margin-bottom: 12px;
+}
+
+.about-grid figure {
+  overflow: hidden;
+}
+
+.about-grid img {
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.about-grid img:hover {
+  transform: scale(1.05);
+}
+/* ==================================================
+   SIZE TABLE
+================================================== */
+
+.size-chart {
+  background: var(--paper);
+}
+
+.size-table {
+  margin-top: 30px;
+}
+
+.size-table caption {
+  caption-side: top;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.size-table th,
+.size-table td {
+  border: 1px solid var(--line);
+  padding: 15px;
+  text-align: center;
+}
+
+.size-table thead {
+  background: var(--dark);
+  color: white;
+}
+
+.size-table tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.size-table tbody tr:hover {
+  background: #ece7de;
+}
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+form {
+  max-width: 700px;
+  margin: auto;
+}
+
+.field {
+  margin-bottom: 22px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.required::after {
+  content: "*";
+  color: red;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: white;
+  transition: 0.3s;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(138, 109, 69, 0.2);
+}
+
+.field-error {
+  display: block;
+  color: red;
+  font-size: 13px;
+  margin-top: 6px;
+}
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 70px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 18px;
+}
+
+.footer p {
+  color: #cccccc;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+}
+
+.footer ul li a {
+  color: #cccccc;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: white;
+}
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+  color: #999;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 25px;
+}
+
+/* ==================================================
+   ATTRIBUTE SELECTOR Chọn phần tử dựa vào attribute.
+================================================== */
+
+input[type="email"] {
+  background: #887e6a;
+}
+
+button[type="submit"] {
+  width: 100%;
+}
+
+/* ==================================================
+   DESCENDANT SELECTOR
+================================================== */
+
+footer ul li a {
+  font-size: 14px;
+}
+
+/* ==================================================
+   CHILD SELECTOR con trực tiếp
+================================================== */
+
+nav > ul {
+  display: flex;
+}
+
+/* ==================================================
+   ADJACENT SIBLING chọn phần tử ngay sau nó
+================================================== */
+
+h2 + p {
+  margin-top: 18px;
+}
+
+/* ==================================================
+   GENERAL SIBLING Chọn tất cả anh em phía sau.
+================================================== */
+
+h2 ~ ul {
+  margin-top: 25px;
+}
+
+/* ==================================================
+   PSEUDO CLASS
+================================================== */
+
+a:hover {
+  color: var(--accent);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  background: #fffdf8;
+}
+
+.product-grid article:nth-child(2) {
+  transform: scale(1.02);
+} /*chọn phần thứ 2 được thay đổi,even là lấy phần tử chẵn còn odd là lấy phần tử lẻ được thay đổi*/
+
+/* ==================================================
+   PSEUDO ELEMENT
+================================================== */
+
+.logo::before {
+  content: "★ ";
+  color: gold;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  background: var(--accent);
+  margin: 16px auto 0;
+}
+
+/* ==================================================
+   INHERIT / INITIAL / UNSET
+================================================== */
+
+.inherit-demo {
+  color: inherit;
+}
+
+.initial-demo {
+  color: initial;
+}
+
+.unset-demo {
+  color: unset;
+}
+
+/* ==================================================
+   !IMPORTANT DEMO
+================================================== */
+
+.demo-important {
+  color: red !important;
+}
+
+/*
+Chỉ dùng để học Specificity.
+Không nên lạm dụng !important.
+*/
+
+.hamburger {
+  display: none;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icons {
+    display: none;
+  }
+  .category-grid,
+  .product-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icons {
+    display: none;
+  }
+  .category-grid,
+  .product-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
