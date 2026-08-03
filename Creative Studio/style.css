@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+* {
+  box-shadow: 0 0 1px 1px red;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,6 +47,12 @@ select {
   font: inherit;
 }
 
+modal {
+  display: hidden;
+}
+checkbox[open] modal {
+  display: block;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -230,6 +240,7 @@ h4 {
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1600&auto=format&fit=crop");
+  /* chưa hiểu rõ cách sử dụng của linear-gradient */
 
   background-size: cover;
   background-position: center;
@@ -308,7 +319,7 @@ h4 {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
@@ -324,6 +335,7 @@ h4 {
   object-fit: cover;
   transition: 0.5s;
 }
+/* chưa hiểu rõ lắm */
 
 .category-grid figure:hover img {
   transform: scale(1.08);
@@ -368,7 +380,9 @@ h4 {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
-
+.product-grid article:nth-child(2) {
+  transform: scale(1.02);
+}
 .product-grid article img {
   aspect-ratio: 4/5;
   object-fit: cover;
@@ -624,9 +638,10 @@ form {
    ATTRIBUTE SELECTOR Chọn phần tử dựa vào attribute.
 ================================================== */
 
-input[type="email"] {
-  background: #887e6a;
+/* input[type="email"] { 
+ background: #887e6a;
 }
+ */
 
 button[type="submit"] {
   width: 100%;
@@ -679,10 +694,6 @@ button:hover {
 input:focus {
   background: #fffdf8;
 }
-
-.product-grid article:nth-child(2) {
-  transform: scale(1.02);
-} /*chọn phần thứ 2 được thay đổi,even là lấy phần tử chẵn còn odd là lấy phần tử lẻ được thay đổi*/
 
 /* ==================================================
    PSEUDO ELEMENT
