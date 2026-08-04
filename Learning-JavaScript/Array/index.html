@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Máy tính đơn giản</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: #761e1e;
+      }
+
+      input {
+        width: 200px;
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 8px 15px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h2>Máy tính đơn giản</h2>
+
+      <label>Số thứ nhất</label><br />
+      <input type="number" id="number1" placeholder="vui lòng nhập..." />
+
+      <br /><br />
+
+      <label>Số thứ hai</label><br />
+      <input type="number" id="number2" placeholder="vui lòng nhập..." />
+
+      <br /><br />
+
+      <button id="add">Cộng</button>
+      <button id="sub">Trừ</button>
+      <button id="mul">Nhân</button>
+      <button id="div">Chia</button>
+
+      <p>Kết quả: <span id="result">0</span></p>
+
+      <!-- Đặt JavaScript ở cuối body -->
+    </div>
+    <script src="JavaScript.js"></script>
+  </body>
+</html>
