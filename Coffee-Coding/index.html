@@ -19,6 +19,7 @@
     <!-- ================= HEADER ================= -->
     <header class="header">
       <div class="container navbar">
+        <button class="menu-btn" aria-label="Menu">☰</button>
         <a href="#" class="logo">BrewLearn</a>
         <nav class="nav-menu">
           <a href="#home" class="nav-link">Home</a>
@@ -30,16 +31,25 @@
           <button class="theme-btn" aria-label="Dark Mode">
             <i class="fa-solid fa-moon"></i>
           </button>
-          <button class="menu-btn" aria-label="Menu">☰</button>
-        </div>
+        </div
       </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#menu" class="mobile-link">Menu</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </nav>
+    <div class="overlay"></div>
     <!-- ================= MAIN ================= -->
 
     <main>
       <!-- ================= HERO ================= -->
 
       <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
           <div class="hero-text">
             <h1 class="hero-title">BrewLearn: Cà Phê & Kiến Thức</h1>
@@ -49,7 +59,9 @@
               các nhà phát triển.
             </p>
 
-            <button class="btn btn-primary">Khám Phá Menu</button>
+            <button id="open-modal" class="btn btn-primary">
+              Khám Phá Menu
+            </button>
           </div>
         </div>
       </section>
@@ -132,7 +144,7 @@
       <section id="about" class="about">
         <div class="container about-content">
           <div class="about-text">
-            <h2 class="section-title">Hơn Cả Một Quán Cà Phê</h2>
+            <h2 class="section-about">Hơn Cả Một Quán Cà Phê</h2>
             <p class="about-description">
               BrewLearn được tạo ra với một sứ mệnh duy nhất: cung cấp không
               gian làm việc và học tập tối ưu cho cộng đồng công nghệ. Chúng tôi
@@ -172,13 +184,48 @@
         <div class="container">
           <h2 class="section-title">Không Gian Làm Việc</h2>
           <div class="gallery-grid">
-            <img
-              class="gallery-image"
-              src="images/cozy_minimalist_coffee_shop_library_warm_natural_lighting_soft_textures_people.png"
-              alt=""
-            />
-            <img class="gallery-image" src="images/screen.png" alt="" />
-            <img class="gallery-image" src="images/sfdjfsergfj.png" alt="" />
+            <div class="gallery-left">
+              <img
+                class="gallery-image"
+                src="images/cozy_minimalist_coffee_shop_library_warm_natural_lighting_soft_textures_people.png"
+                alt=""
+              />
+              <img class="gallery-image" src="images/screen.png" alt="" />
+            </div>
+            <div class="gallery-right">
+              <img class="gallery-image" src="images/sfdjfsergfj.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="reservation" class="reservation">
+        <div class="container">
+          <h2 class="section-title">Đặt Bàn</h2>
+          <div class="reservation-content">
+            <form class="reservation-form" id="reservation-form">
+              <input
+                type="text"
+                class="reservation-input"
+                placeholder="Họ và tên"
+                required
+              />
+
+              <input
+                type="tel"
+                class="reservation-input"
+                placeholder="Số điện thoại"
+                required
+              />
+
+              <textarea
+                class="reservation-textarea"
+                placeholder="Bạn muốn đặt bàn mấy người, khung giờ nào?"
+              ></textarea>
+
+              <button type="submit" class="reservation-btn">
+                Gửi yêu cầu đặt bàn
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -207,7 +254,6 @@
     <!-- ================= MENU MODAL ================= -->
 
     <div class="menu-modal">
-      <div class="modal-overlay"></div>
       <div class="modal-content">
         <button class="modal-close">
           <i class="fa-solid fa-xmark"></i>

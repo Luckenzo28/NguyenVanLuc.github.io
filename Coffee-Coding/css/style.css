@@ -8,8 +8,403 @@
   --font-primary: "Inter", sans-serif;
   --font-secondary: "JetBrains Mono", monospace;
 }
+a {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: aliceblue;
+}
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: white;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.nav-menu {
+  display: flex;
+  position: relative;
+  gap: 20px;
+}
+.menu-btn {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
+.nav-link {
+  color: black;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: blue;
+  transition: 0.3s ease;
+}
+.nav-link:hover {
+  color: blue;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 24px;
+  color: blue;
+}
+.theme-btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.hero {
+  position: relative;
+  background-image: url("/images/cozy_minimalist_coffee_shop_library_warm_natural_lighting_soft_textures_people.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+}
+.hero-content {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center; /* Căn giữa ngang */
+  align-items: center; /* Căn giữa dọc */
+  height: 100vh;
+}
+.hero-text {
+  text-align: center;
+  max-width: 700px;
+}
+.hero-title {
+  color: blue;
+  padding: 10px;
+  font-size: 45px;
+  font-weight: 600;
+}
+.hero-description {
+  font-size: 20px;
+  padding: 10px;
+  opacity: 0.6;
+}
+.btn-primary {
+  padding: 16px 32px;
+  margin-top: 15px;
+  font-weight: bold;
+  background: blue;
+  color: white;
+  border: none;
+}
+.btn-primary:hover {
+  color: black;
+  background: white;
+}
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  padding: 30px;
+  margin-top: 10px;
+}
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  padding: 0 60px;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+.menu-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.menu-content {
+  padding: 20px;
+}
+
+.menu-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.menu-description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(196, 188, 188, 0.75);
+  padding: 20px 0;
+}
+
+.menu-tag {
+  background: rgb(158, 163, 168);
+  color: white;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.menu-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: blue;
+}
+
+.about {
+  padding: 40px 20px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: rgb(224, 233, 235);
+  padding: 50px;
+  border-radius: 10px;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+.about-image img:hover {
+  transform: scale(1.05);
+}
+.section-about {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.about-description {
+  padding-bottom: 20px;
+  opacity: 0.7;
+}
+
+.feature-list {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 10px;
+  padding: 30px 0;
+}
+.gallery-left {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+}
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.footer {
+  background: rgb(212, 220, 223);
+  padding: 20px 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-size: 24px;
+  color: blue;
+}
+.footer-link {
+  padding: 10px;
+}
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.menu-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6);
+}
+.menu-modal.active {
+  display: flex;
+}
+.modal-content {
+  position: relative;
+  width: 700px;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  border: none;
+  background: white;
+  border-radius: 10px;
+}
+.modal-close:hover {
+  background: rgb(240, 236, 236);
+}
+.modal-title {
+  text-align: center;
+  font-size: 30px;
+}
+.modal-menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.modal-card {
+  text-align: center;
+  padding-top: 20px;
+}
+.modal-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.reservation-content {
+  background: rgb(212, 205, 205);
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reservation-input,
+.reservation-textarea {
+  width: 100%;
+  padding: 18px 22px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 18px;
+  outline: none;
+  transition: 0.3s;
+  background: white;
+}
+
+.reservation-input:focus,
+.reservation-textarea:focus {
+  border: 2px solid black;
+}
+
+.reservation-textarea {
+  height: 180px;
+  overflow: auto;
+}
+
+.reservation-btn {
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  background: #c78952;
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reservation-btn:hover {
+  background: #b9783f;
+  color: #fff;
+}
+
+body.dark {
+  background: #121212;
+  color: black;
+}
+body.dark .section-title {
+  color: white;
+}
+body.dark .header {
+  background: #000;
+}
+body.dark .logo {
+  color: white;
+}
+body.dark .menu-btn {
+  color: white;
+}
+body.dark .nav-link {
+  color: white;
+}
+.theme-btn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+body.dark .theme-btn {
+  background: #333;
+  color: #ffd43b;
 }
