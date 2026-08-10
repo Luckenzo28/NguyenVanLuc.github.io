@@ -56,8 +56,6 @@ body {
 .nav-link::after {
   content: "";
   display: block;
-  left: 0;
-  bottom: -5px;
   width: 0;
   height: 2px;
   background: blue;
@@ -95,7 +93,6 @@ body {
   background: rgba(255, 255, 255, 0.75);
 }
 .hero-content {
-  position: absolute;
   z-index: 1;
   display: flex;
   justify-content: center; /* Căn giữa ngang */
@@ -352,6 +349,9 @@ body {
 .reservation-input:focus,
 .reservation-textarea:focus {
   border: 2px solid black;
+}
+
+i.fa-sun {
 }
 
 .reservation-textarea {
