@@ -4,61 +4,214 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Máy tính đơn giản</title>
+    <script src="JavaScript.js" defer></script>
 
     <style>
-      body {
+      * {
+        box-sizing: border-box;
         margin: 0;
-        height: 100vh;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+
+        min-height: 100vh;
 
         display: flex;
         justify-content: center;
         align-items: center;
 
-        background: #761e1e;
+        background: #f2f2f2;
+      }
+
+      /* Form */
+
+      .form-container {
+        width: 400px;
+
+        padding: 30px;
+
+        background: white;
+
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      /* Nhóm input */
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+
+        margin-bottom: 8px;
+
+        font-weight: bold;
       }
 
       input {
-        width: 200px;
-        padding: 8px;
-        margin-bottom: 10px;
+        width: 100%;
+
+        padding: 12px;
+
+        border: 1px solid #ccc;
+
+        border-radius: 5px;
+
+        font-size: 16px;
       }
 
+      input:focus {
+        outline: none;
+      }
+
+      /* Input lỗi */
+
+      .input-error {
+        border: 1px solid red;
+      }
+
+      /* Thông báo lỗi */
+
+      .error {
+        margin-top: 5px;
+
+        color: red;
+
+        font-size: 14px;
+      }
+
+      /* Button */
+
       button {
-        padding: 8px 15px;
-        margin-right: 5px;
+        width: 100%;
+
+        padding: 12px;
+
+        border: none;
+
+        border-radius: 5px;
+
+        background: black;
+
+        color: white;
+
+        font-size: 16px;
+
         cursor: pointer;
       }
 
-      p {
-        font-size: 22px;
+      button:hover {
+        opacity: 0.8;
+      }
+      /* =========================
+   PASSWORD
+========================= */
+
+      .password-wrapper {
+        position: relative;
+      }
+
+      /* Input mật khẩu */
+
+      .password-wrapper input {
+        padding-right: 45px;
+      }
+
+      /* Nút con mắt */
+
+      .toggle-password {
+        position: absolute;
+
+        top: 50%;
+        right: 10px;
+
+        transform: translateY(-50%);
+
+        width: auto;
+
+        padding: 5px;
+
+        background: transparent;
+
+        color: #333;
+
+        font-size: 18px;
+
+        border: none;
+
+        cursor: pointer;
+      }
+
+      .toggle-password:hover {
+        background: transparent;
+      }
+
+      /* Thành công */
+
+      #successMessage {
+        margin-top: 15px;
+
+        text-align: center;
+
+        color: green;
+
         font-weight: bold;
       }
     </style>
   </head>
 
   <body>
-    <div>
-      <h2>Máy tính đơn giản</h2>
+    <div class="form-container">
+      <h1>Đăng ký</h1>
 
-      <label>Số thứ nhất</label><br />
-      <input type="number" id="number1" placeholder="vui lòng nhập..." />
+      <form id="registerForm">
+        <!-- Họ tên -->
+        <div class="form-group">
+          <label for="name">Họ tên</label>
 
-      <br /><br />
+          <input type="text" id="name" placeholder="Nhập họ tên" />
 
-      <label>Số thứ hai</label><br />
-      <input type="number" id="number2" placeholder="vui lòng nhập..." />
+          <p class="error" id="nameError"></p>
+        </div>
 
-      <br /><br />
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
 
-      <button id="add">Cộng</button>
-      <button id="sub">Trừ</button>
-      <button id="mul">Nhân</button>
-      <button id="div">Chia</button>
+          <input type="email" id="email" placeholder="Nhập email" />
 
-      <p>Kết quả: <span id="result">0</span></p>
+          <p class="error" id="emailError"></p>
+        </div>
 
-      <!-- Đặt JavaScript ở cuối body -->
+        <!-- Mật khẩu -->
+        <div class="form-group">
+          <label for="password">Mật khẩu</label>
+
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Nhập mật khẩu" />
+
+            <button type="button" class="toggle-password" id="togglePassword">
+              👁
+            </button>
+          </div>
+
+          <p class="error" id="passwordError"></p>
+        </div>
+
+        <!-- Button -->
+        <button type="submit">Đăng ký</button>
+
+        <!-- Thông báo thành công -->
+        <p id="successMessage"></p>
+      </form>
     </div>
-    <script src="JavaScript.js"></script>
   </body>
 </html>

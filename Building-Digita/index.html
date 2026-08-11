@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Creative Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="/js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <a href="#" class="logo"> POR<span>TFOLIO</span> </a>
+        <nav class="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="hire-btn"> Hire Me </a>
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div class="mobile-menu">
+      <button class="close-btn">×</button>
+
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-label">HELLO, I'M A DEVELOPER</p>
+
+          <h1>
+            Building
+            <span>Digital</span>
+            <br />
+            <span>Experiences</span>
+          </h1>
+
+          <p class="hero-description">
+            Tôi xây dựng các sản phẩm web hiện đại, tối ưu trải nghiệm và hiệu
+            năng. Cùng xem qua một số dự án nổi bật của tôi.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="primary-btn"> Xem dự án </a>
+
+            <a href="#about" class="secondary-btn">
+              <span>▶</span>
+              Xem thêm
+            </a>
+          </div>
+        </div>
+
+        <!-- GLASS CARD -->
+        <div class="hero-glass-card">
+          <div class="glass-item">
+            <div class="glass-icon purple">💻</div>
+
+            <div>
+              <h3>Web Development</h3>
+              <p>Modern & Responsive</p>
+            </div>
+          </div>
+
+          <div class="glass-item">
+            <div class="glass-icon orange">✎</div>
+
+            <div>
+              <h3>UI/UX Design</h3>
+              <p>Beautiful & Usable</p>
+            </div>
+          </div>
+
+          <div class="glass-item">
+            <div class="glass-icon blue">◈</div>
+
+            <div>
+              <h3>Performance</h3>
+              <p>Fast & Optimized</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <!-- FILTER -->
+        <div class="filter-wrapper">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+        </div>
+
+        <!-- GALLERY -->
+        <div class="gallery">
+          <!-- CARD 1 -->
+          <article class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                alt="Dashboard analytics"
+              />
+              <span class="project-category web"> Web </span>
+            </div>
+            <div class="project-info">
+              <h3>Dashboard Analytics</h3>
+              <p>
+                Ứng dụng dashboard quản lý dữ liệu, thống kê doanh thu và người
+                dùng.
+              </p>
+              <a href="#">
+                Xem chi tiết
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+          <!-- CARD 2 -->
+          <article class="project-card" data-category="uiux">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80"
+                alt="Mobile banking UI"
+              />
+              <span class="project-category uiux"> UI/UX </span>
+            </div>
+            <div class="project-info">
+              <h3>Mobile Banking UI</h3>
+              <p>
+                Thiết kế giao diện ngân hàng hiện đại, tối giản và dễ sử dụng.
+              </p>
+              <a href="#">
+                Xem chi tiết
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80"
+                alt="Fitness application"
+              />
+              <span class="project-category mobile"> Mobile </span>
+            </div>
+            <div class="project-info">
+              <h3>Fitness App</h3>
+              <p>
+                Ứng dụng theo dõi tập luyện, dinh dưỡng và sức khỏe mỗi ngày.
+              </p>
+              <a href="#">
+                Xem chi tiết
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                alt="Business website"
+              />
+              <span class="project-category web"> Web </span>
+            </div>
+            <div class="project-info">
+              <h3>Business Landing Page</h3>
+              <p>
+                Thiết kế landing page giới thiệu doanh nghiệp, tối ưu chuyển
+                đổi.
+              </p>
+              <a href="#">
+                Xem chi tiết
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="project-card" data-category="uiux">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=80"
+                alt="Design system"
+              />
+              <span class="project-category uiux"> UI/UX </span>
+            </div>
+            <div class="project-info">
+              <h3>Design System</h3>
+              <p>
+                Bộ UI components và style guide giúp tiết kiệm thời gian thiết
+                kế.
+              </p>
+              <a href="#">
+                Xem chi tiết
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 6 -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80"
+                alt="Travel application"
+              />
+              <span class="project-category mobile"> Mobile </span>
+            </div>
+            <div class="project-info">
+              <h3>Travel App</h3>
+              <p>Ứng dụng du lịch: đặt vé, khách sạn và gợi ý địa điểm.</p>
+              <a href="#">
+                Xem chi tiết
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about section" id="about">
+      <div class="container about-container">
+        <div class="about-content">
+          <p class="section-label">ABOUT ME</p>
+          <h2>Passionate about creating value through code.</h2>
+          <p class="about-text">
+            Tôi là lập trình viên Front-end với niềm đam mê xây dựng những sản
+            phẩm web hiện đại, responsive và mang lại trải nghiệm tốt cho người
+            dùng.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <strong>30+</strong>
+              <span>Dự án hoàn thành</span>
+            </div>
+
+            <div class="stat">
+              <strong>3+</strong>
+              <span>Năm kinh nghiệm</span>
+            </div>
+
+            <div class="stat">
+              <strong>25+</strong>
+              <span>Khách hàng</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="skills-card">
+          <div class="skill">
+            <div class="skill-top">
+              <span>HTML / CSS</span>
+              <strong>90%</strong>
+            </div>
+
+            <div class="progress">
+              <span style="width: 90%"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top">
+              <span>JavaScript</span>
+              <strong>85%</strong>
+            </div>
+
+            <div class="progress">
+              <span style="width: 85%"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top">
+              <span>React</span>
+              <strong>80%</strong>
+            </div>
+
+            <div class="progress">
+              <span style="width: 80%"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top">
+              <span>UI / UX</span>
+              <strong>85%</strong>
+            </div>
+
+            <div class="progress">
+              <span style="width: 85%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contact">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h3>POR<span>TFOLIO</span></h3>
+
+          <p>Cảm ơn bạn đã ghé thăm portfolio của tôi.</p>
+
+          <div class="socials">
+            <a href="#">f</a>
+            <a href="#">◎</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+
+          <a href="#">Web Development</a>
+          <a href="#">UI/UX Design</a>
+          <a href="#">Mobile App</a>
+          <a href="#">Branding</a>
+        </div>
+
+        <div class="footer-column newsletter">
+          <h4>Newsletter</h4>
+
+          <p>Đăng ký để nhận những cập nhật mới nhất về dự án.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email của bạn"
+              required
+            />
+
+            <button type="submit">Đăng ký</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container copyright">
+        <p>© 2026 Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

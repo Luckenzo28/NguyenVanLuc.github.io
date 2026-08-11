@@ -1,0 +1,11 @@
+.mobile-menu {
+  display: none;
+}
+.menu-btn {
+  display: none;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+}
+
+a {
+  text-decoration: none;
+}
