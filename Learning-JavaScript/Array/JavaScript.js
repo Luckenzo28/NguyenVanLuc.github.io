@@ -1,150 +1,168 @@
-// ========================================
-// 1. LẤY CÁC PHẦN TỬ HTML
-// ========================================
+// Array dùng để lưu trữ nhiều giá trị trong cùng một biến.
+// Các phần tử trong Array được đánh index bắt đầu từ 0.
 
-const form = document.querySelector("#registerForm");
+let fruits = ["Apple", "Banana", "Orange"];
 
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
-const passwordInput = document.querySelector("#password");
-const togglePassword = document.querySelector("#togglePassword");
+console.log(fruits);
+// Output: ["Apple", "Banana", "Orange"]
 
-const nameError = document.querySelector("#nameError");
-const emailError = document.querySelector("#emailError");
-const passwordError = document.querySelector("#passwordError");
+// index dùng để truy cập phần tử trong Array.
+// Array bắt đầu từ vị trí 0.
 
-const successMessage = document.querySelector("#successMessage");
+console.log(fruits[0]);
+// Output: "Apple"
 
-// ========================================
-// 2. BẮT SỰ KIỆN SUBMIT
-// ========================================
+console.log(fruits[1]);
+// Output: "Banana"
 
-form.addEventListener("submit", function (event) {
-  // Ngăn form reload trang
-  event.preventDefault();
+// length dùng để đếm số lượng phần tử trong Array.
 
-  // ========================================
-  // 3. XÓA THÔNG BÁO CŨ
-  // ========================================
+console.log(fruits.length);
+// Output: 3
 
-  nameError.textContent = "";
-  emailError.textContent = "";
-  passwordError.textContent = "";
-  successMessage.textContent = "";
+// push() dùng để thêm phần tử vào cuối Array.
 
-  // Xóa class lỗi cũ
+fruits.push("Mango");
 
-  nameInput.classList.remove("input-error");
-  emailInput.classList.remove("input-error");
-  passwordInput.classList.remove("input-error");
+console.log(fruits);
+// Output: ["Apple", "Banana", "Orange", "Mango"]
 
-  // ========================================
-  // 4. LẤY GIÁ TRỊ INPUT
-  // ========================================
+// pop() dùng để xóa phần tử cuối cùng của Array.
+// pop() trả về phần tử vừa bị xóa.
 
-  const name = nameInput.value.trim();
+console.log(fruits.pop());
+// Output: "Mango"
 
-  const email = emailInput.value.trim();
+console.log(fruits);
+// Output: ["Apple", "Banana", "Orange"]
 
-  const password = passwordInput.value.trim();
+// unshift() dùng để thêm phần tử vào đầu Array.
 
-  // Mặc định cho rằng form hợp lệ
+fruits.unshift("Mango");
 
-  let isValid = true;
+console.log(fruits);
+// Output: ["Mango", "Apple", "Banana", "Orange"]
 
-  // ========================================
-  // 5. KIỂM TRA HỌ TÊN
-  // ========================================
+// shift() dùng để xóa phần tử đầu tiên của Array.
+// shift() trả về phần tử vừa bị xóa.
 
-  if (name === "") {
-    nameError.textContent = "Vui lòng nhập họ tên";
+console.log(fruits.shift());
+// Output: "Mango"
 
-    nameInput.classList.add("input-error");
+console.log(fruits);
+// Output: ["Apple", "Banana", "Orange"]
 
-    isValid = false;
-  }
+// indexOf() dùng để tìm vị trí xuất hiện đầu tiên
+// của một phần tử trong Array.
+// Nếu không tìm thấy thì trả về -1.
 
-  // ========================================
-  // 6. KIỂM TRA EMAIL
-  // ========================================
-  if (email === "") {
-    emailError.textContent = "Vui lòng nhập email";
+console.log(fruits.indexOf("Banana"));
+// Output: 1
 
-    emailInput.classList.add("input-error");
+console.log(fruits.indexOf("Mango"));
+// Output: -1
 
-    isValid = false;
-  } else if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)) {
-    emailError.textContent = "Email phải có dạng example@gmail.com";
+// includes() dùng để kiểm tra Array có chứa một phần tử hay không.
+// Trả về true hoặc false.
 
-    emailInput.classList.add("input-error");
+console.log(fruits.includes("Banana"));
+// Output: true
 
-    isValid = false;
-  }
+console.log(fruits.includes("Mango"));
+// Output: false
 
-  // ========================================
-  // 7. KIỂM TRA MẬT KHẨU
-  // ========================================
+// slice() dùng để lấy một phần của Array
+// và trả về một Array mới.
+// slice(start, end): lấy từ start đến trước end.
+// Không làm thay đổi Array ban đầu.
 
-  if (password === "") {
-    passwordError.textContent = "Vui lòng nhập mật khẩu";
+console.log(fruits.slice(0, 2));
+// Output: ["Apple", "Banana"]
 
-    passwordInput.classList.add("input-error");
+// splice() dùng để thêm, xóa hoặc thay thế phần tử trong Array.
+// splice(start, deleteCount)
 
-    isValid = false;
-  } else if (password.length < 8) {
-    passwordError.textContent = "Mật khẩu phải có ít nhất 8 ký tự";
+fruits.splice(1, 1);
 
-    passwordInput.classList.add("input-error");
+console.log(fruits);
+// Output: ["Apple", "Orange"]
 
-    isValid = false;
-  } else if (!/^[A-Z]/.test(password)) {
-    passwordError.textContent = "Ký tự đầu tiên phải là chữ IN HOA";
+// Thêm lại Banana vào vị trí index 1.
 
-    passwordInput.classList.add("input-error");
+fruits.splice(1, 0, "Banana");
 
-    isValid = false;
-  } else if (!/[A-Za-z]/.test(password)) {
-    passwordError.textContent = "Mật khẩu phải có ít nhất 1 chữ cái";
+console.log(fruits);
+// Output: ["Apple", "Banana", "Orange"]
 
-    passwordInput.classList.add("input-error");
+// forEach() dùng để duyệt qua từng phần tử trong Array.
 
-    isValid = false;
-  } else if (!/[0-9]/.test(password)) {
-    passwordError.textContent = "Mật khẩu phải có ít nhất 1 số";
-
-    passwordInput.classList.add("input-error");
-
-    isValid = false;
-  } else if (!/[!@#$%^&*(),.?":{}|<>_\-]/.test(password)) {
-    passwordError.textContent = "Mật khẩu phải có ít nhất 1 ký tự đặc biệt";
-
-    passwordInput.classList.add("input-error");
-
-    isValid = false;
-  }
-
-  togglePassword.addEventListener("click", function () {
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-
-      togglePassword.textContent = "🙈";
-    } else {
-      passwordInput.type = "password";
-
-      togglePassword.textContent = "👁";
-    }
-  });
-
-  // ========================================
-  // 8. KIỂM TRA KẾT QUẢ CUỐI CÙNG
-  // ========================================
-  if (isValid) {
-    successMessage.textContent = "Đăng ký thành công";
-
-    form.reset();
-
-    setTimeout(function () {
-      window.open("youtube.com", "_blank");
-    }, 1000);
-  }
+fruits.forEach(function (fruit) {
+  console.log(fruit);
 });
+
+// Output:
+// Apple
+// Banana
+// Orange
+
+// map() dùng để tạo một Array mới
+// dựa trên kết quả của từng phần tử.
+
+let numbers = [10, 20, 30, 40, 50];
+
+let doubledNumbers = numbers.map(function (number) {
+  return number * 2;
+});
+
+console.log(doubledNumbers);
+// Output: [20, 40, 60, 80, 100]
+
+// filter() dùng để lọc các phần tử
+// thỏa mãn một điều kiện.
+
+let filteredNumbers = numbers.filter(function (number) {
+  return number >= 30;
+});
+
+console.log(filteredNumbers);
+// Output: [30, 40, 50]
+
+// find() dùng để tìm phần tử đầu tiên
+// thỏa mãn điều kiện.
+
+let foundNumber = numbers.find(function (number) {
+  return number > 25;
+});
+
+console.log(foundNumber);
+// Output: 30
+
+// some() dùng để kiểm tra xem có ít nhất một phần tử
+// thỏa mãn điều kiện hay không.
+
+console.log(
+  numbers.some(function (number) {
+    return number > 40;
+  }),
+);
+// Output: true
+
+// every() dùng để kiểm tra xem tất cả phần tử
+// có thỏa mãn điều kiện hay không.
+
+console.log(
+  numbers.every(function (number) {
+    return number > 0;
+  }),
+);
+// Output: true
+
+// reduce() dùng để tính toán hoặc gom tất cả phần tử
+// trong Array thành một giá trị duy nhất.
+
+let total = numbers.reduce(function (sum, number) {
+  return sum + number;
+}, 0);
+
+console.log(total);
+// Output: 150

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+
+      <!-- Clock -->
+      <div id="clock">00:00:00</div>
+
+      <!-- Form -->
+      <form id="todoForm">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Enter your task..."
+          autocomplete="off"
+        />
+
+        <button type="submit">Add</button>
+      </form>
+
+      <!-- Message -->
+      <p id="message"></p>
+
+      <!-- Filter -->
+      <div class="filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+
+        <button class="filter-btn" data-filter="active">Active</button>
+
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <!-- Todo List -->
+      <ul id="todoList"></ul>
+
+      <!-- Counter -->
+      <p id="counter">0 tasks</p>
+    </div>
+
+    <script src="JavaScript.js"></script>
+  </body>
+</html>
