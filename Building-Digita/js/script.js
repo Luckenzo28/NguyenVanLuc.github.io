@@ -39,10 +39,11 @@ filterButtons.forEach(function (button) {
       // hoặc category của card giống filter
       if (filterValue === "all" || filterValue === cardCategory) {
         // Hiện card
-        card.classList.remove("hidden");
+        // card.classList.remove("hidden");
+        card.style.display = "block";
       } else {
         // Ẩn card
-        card.classList.add("hidden");
+        card.style.display = "none";
       }
     });
   });
