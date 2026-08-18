@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Brewista Coffee - Capstone CSS Animation & JavaScript" />
+    <title>Brewista Coffee | Capstone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header" id="home">
+      <nav class="navbar container">
+        <a class="logo" href="#home">
+          <span class="logo-mark">☕</span>
+          <span>
+            <strong>Brewista</strong>
+            <small>COFFEE</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button"><span></span><span></span><span></span></button>
+
+        <div class="nav-menu" id="primary-menu">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <button class="nav-order" type="button" data-open-modal>Order Now</button>
+        </div>
+      </nav>
+
+      <section class="hero container">
+        <div class="hero-content">
+          <p class="eyebrow hero-item">✦ PREMIUM COFFEE</p>
+          <h1 id="hero-title" class="hero-item">Good Coffee,<br /><span>Great Day.</span></h1>
+          <p class="hero-description hero-item">Những hạt cà phê được tuyển chọn kỹ lưỡng, rang vừa đủ và phục vụ với tất cả sự tận tâm.</p>
+          <div class="hero-actions hero-item">
+            <a class="btn btn-primary" href="#menu">Khám phá menu <span>→</span></a>
+            <a class="btn btn-outline" href="#about">Câu chuyện của chúng tôi</a>
+          </div>
+          <ul class="hero-benefits hero-item">
+            <li><span>✦</span> Hạt chất lượng</li>
+            <li><span>✦</span> Rang thủ công</li>
+            <li><span>✦</span> Làm bằng đam mê</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual hero-item">
+          <div class="coffee-glow"></div>
+          <div class="coffee-cup">☕</div>
+          <div class="coffee-beans">● ● ● ● ● ● ● ●</div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="menu-section section" id="menu">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">✦ OUR MENU</p>
+            <h2 id="menu-title">Awesome Coffee for You</h2>
+            <p>Chọn món yêu thích và thử tính năng filter/sort bằng JavaScript.</p>
+          </div>
+
+          <div class="menu-controls reveal">
+            <div class="filter-group">
+              <button class="filter-btn active" data-filter="all">Tất cả</button>
+              <button class="filter-btn" data-filter="hot">Hot Coffee</button>
+              <button class="filter-btn" data-filter="iced">Iced Coffee</button>
+              <button class="filter-btn" data-filter="dessert">Desserts</button>
+              <button class="filter-btn" data-filter="special">Special</button>
+            </div>
+
+            <label class="sort-control">
+              <span>Sắp xếp:</span>
+              <select id="sort-select">
+                <option value="default">Mặc định</option>
+                <option value="price-low">Giá thấp → cao</option>
+                <option value="price-high">Giá cao → thấp</option>
+                <option value="rating">Đánh giá cao nhất</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="product-grid" id="product-grid">
+            <article class="product-card reveal" data-category="hot" data-price="4.5" data-rating="4.8">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=900&q=85"
+                  alt="Cappuccino"
+                  loading="lazy"
+                />
+                <span class="product-tag">Popular</span>
+              </div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Cappuccino</h3>
+                  <span>★ 4.8</span>
+                </div>
+                <p>Cà phê espresso cùng lớp bọt sữa mịn.</p>
+                <div class="product-footer">
+                  <strong>$4.50</strong><button class="add-cart" type="button" data-product="Cappuccino">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-category="iced" data-price="4.2" data-rating="4.7">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85"
+                  alt="Iced Latte"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Iced Latte</h3>
+                  <span>★ 4.7</span>
+                </div>
+                <p>Espresso, sữa tươi và đá mát lạnh.</p>
+                <div class="product-footer">
+                  <strong>$4.20</strong><button class="add-cart" type="button" data-product="Iced Latte">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-category="special" data-price="4.8" data-rating="4.9">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=900&q=85"
+                  alt="Mocha"
+                  loading="lazy"
+                />
+                <span class="product-tag">Chef's Pick</span>
+              </div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Mocha</h3>
+                  <span>★ 4.9</span>
+                </div>
+                <p>Chocolate, espresso và sữa hòa quyện.</p>
+                <div class="product-footer">
+                  <strong>$4.80</strong><button class="add-cart" type="button" data-product="Mocha">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-category="dessert" data-price="4.6" data-rating="4.6">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=85"
+                  alt="Tiramisu"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Tiramisu</h3>
+                  <span>★ 4.6</span>
+                </div>
+                <p>Lớp kem mềm mịn cùng hương cà phê nhẹ.</p>
+                <div class="product-footer">
+                  <strong>$4.60</strong><button class="add-cart" type="button" data-product="Tiramisu">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-category="hot" data-price="4.9" data-rating="4.8">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
+                  alt="Americano"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Americano</h3>
+                  <span>★ 4.8</span>
+                </div>
+                <p>Espresso đậm vị pha cùng nước nóng.</p>
+                <div class="product-footer">
+                  <strong>$4.90</strong><button class="add-cart" type="button" data-product="Americano">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-category="iced" data-price="5.1" data-rating="4.9">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=85"
+                  alt="Caramel Cold Brew"
+                  loading="lazy"
+                />
+                <span class="product-tag">New</span>
+              </div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Caramel Cold Brew</h3>
+                  <span>★ 4.9</span>
+                </div>
+                <p>Cold brew dịu nhẹ với caramel thơm ngọt.</p>
+                <div class="product-footer">
+                  <strong>$5.10</strong><button class="add-cart" type="button" data-product="Caramel Cold Brew">+</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
