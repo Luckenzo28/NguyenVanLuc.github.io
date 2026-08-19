@@ -1,0 +1,98 @@
+/* =========================
+   BREWISTA CAPSTONE CSS
+   ========================= */
+
+:root {
+  --bg: #fbf8f2;
+  --surface: #ffffff;
+  --dark: #171310;
+  --text: #2b2420;
+  --muted: #766c65;
+  --coffee: #9b6327;
+  --coffee-dark: #68401c;
+  --gold: #d5a15b;
+  --border: #e8dfd4;
+  --shadow: 0 18px 45px rgba(45, 30, 18, 0.11);
+  --radius: 22px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 65px 0;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--coffee);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.08;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+p {
+  color: var(--muted);
+}
